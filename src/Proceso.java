@@ -25,18 +25,13 @@ public class Proceso {
         this.tiempoEjecucion = tiempoEjecucion;
     }
 
-    public void simularBloqueado(){
+    public void simularBloqueado(int tiempoActual){
         Random random = new Random();
-        boolean bloquedo = random.nextBoolean();
-        if (bloquedo){
-            int tiempo = random.nextInt(7) + 2; // Tiempo bloqueado entre 2 - 8
-            this.estado = EstadoProceso.Bloqueado;
-            this.tiempoBloqueado = tiempo;
-        }else{
-            this.estado = EstadoProceso.Listo;
-            this.tiempoBloqueado = 0;
-        }
+        int duracion = random.nextInt(7) + 2; // Tiempo bloqueado 2 - 8
+        this.estado = EstadoProceso.Bloqueado;
+        this.tiempoBloqueado = tiempoActual + duracion; // Momendo en que se desbloquea
     }
+
 
     public void generarNumeroIntrucciones(){
         Random random = new Random();

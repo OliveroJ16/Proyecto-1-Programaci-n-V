@@ -16,7 +16,7 @@ public class Cola {
             Proceso proceso = new Proceso(); // Verificar la instancia de este objeto (Usa un constructor vacio)
             proceso.setId(i);
             proceso.setIdCola(this.id);
-            proceso.simularBloqueado();
+            proceso.setEstado(EstadoProceso.Listo); //Todos los procesos empizan en "Listo"
             proceso.generarNumeroIntrucciones();
             this.procesos.add(proceso);
         }

@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class AdministradorMLQ {
@@ -8,12 +9,25 @@ public class AdministradorMLQ {
     private int quantum;
     private int procesosPorCola;
 
+     // Atributos para metricas
+    private int tiempoTotalEjecucion;        // desde inicio hasta fin de la simulación
+    private int tiempoTotalCambioContexto;   // suma de todos los cambios de contexto
+    private int tiempoTotalBloqueo;          // suma de todos los tiempos en bloqueados
+    private int tiempoTotalEspera;           // suma de todos los tiempos que procesos estuvieron en cola de listos
+    private List<Proceso> procesosBloqueados; // para guardar los procesos bloqueados
+    
+
     //Contructor
     public AdministradorMLQ(int cambioContexto, int quantum, int procesosPorCola) {
         this.cambioContexto = cambioContexto;
         this.quantum = quantum;
         this.procesosPorCola = procesosPorCola;
         this.colas = new LinkedList<>();
+        this.tiempoTotalEjecucion = 0;
+        this.tiempoTotalCambioContexto = 0;
+        this.tiempoTotalBloqueo = 0;
+        this.tiempoTotalEspera = 0;
+        this.procesosBloqueados = new LinkedList<>();
     }
 
     // Método para crear e inicializar la lista de colas
