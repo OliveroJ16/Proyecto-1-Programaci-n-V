@@ -17,7 +17,7 @@ public class Cola {
             proceso.setId(i);
             proceso.setIdCola(this.id);
             proceso.setEstado(EstadoProceso.Listo); //Todos los procesos empizan en "Listo"
-            proceso.generarNumeroIntrucciones();
+            proceso.generarNumeroInstrucciones();
             this.procesos.add(proceso);
         }
         return this.procesos;

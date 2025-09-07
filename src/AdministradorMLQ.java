@@ -46,6 +46,49 @@ public class AdministradorMLQ {
         }
     }
 
+    //Metodo para procesar los procesos (borrador)
+    public Proceso procesarProcesos(Proceso proceso) {
+        proceso.setEstado(EstadoProceso.Ejecucion);
+        int quantumProceso = this.quantum;
+        
+        if (proceso.getRequireBloqueo()) {
+            // Ejecuta 1 instrucción antes de bloquear
+            proceso.disminuirTiempoInstrucciones();
+            proceso.aumentarTiempoEjecucion();
+            this.tiempoTotalEjecucion++;
+
+            // Simula bloqueo
+            proceso.simularBloqueado();
+            proceso.setRequireBloqueo(false);
+            this.procesosBloqueados.add(proceso);
+            proceso.setEstado(EstadoProceso.Bloqueado);
+
+        } else {
+            // Ejecuta hasta que acabe instrucciones o consuma quantum
+            while (proceso.getNumeroInstrucciones() > 0 && quantumProceso > 0) {
+                proceso.disminuirTiempoInstrucciones();
+                proceso.aumentarTiempoEjecucion();
+                this.tiempoTotalEjecucion++;
+                quantumProceso--;
+
+            }
+
+            // Decidir estado final
+            if (proceso.getNumeroInstrucciones() <= 0) {
+                proceso.setEstado(EstadoProceso.Terminado);
+            } else {
+                proceso.setEstado(EstadoProceso.Listo);
+            }
+        }
+
+        // Cada proceso conlleva un cambio de contexto
+        this.tiempoTotalCambioContexto++;
+        this.tiempoTotalEjecucion++;
+
+        return proceso;
+    }
+
+
     //Getter y Setter
     public int getCambioContexto() {
         return this.cambioContexto;

@@ -6,6 +6,7 @@ public class Proceso {
     private int numeroInstrucciones;   // Instrucciones restantes
     private EstadoProceso estado;      // LISTO, EJECUCION, BLOQUEADO, TERMINADO
     private int tiempoBloqueado;       // Tiempo que estará bloqueado (si aplica)
+    private boolean requiereBloqueo;
     
     private int tiempoEnCola;          // Tiempo esperando turno en la cola
     private int tiempoCambioContexto;  // CDC aplicado a este proceso
@@ -25,18 +26,30 @@ public class Proceso {
         this.tiempoEjecucion = tiempoEjecucion;
     }
 
-    public void simularBloqueado(int tiempoActual){
+    public void simularBloqueado(){
         Random random = new Random();
         int duracion = random.nextInt(7) + 2; // Tiempo bloqueado 2 - 8
         this.estado = EstadoProceso.Bloqueado;
-        this.tiempoBloqueado = tiempoActual + duracion; // Momendo en que se desbloquea
+        this.tiempoBloqueado = duracion;;
     }
 
 
-    public void generarNumeroIntrucciones(){
+    public void generarNumeroInstrucciones(){
         Random random = new Random();
         int intrucciones = random.nextInt(96) + 5; // N intrucciones entre 5 - 100
         this.numeroInstrucciones = intrucciones;
+    }
+
+    public void aumentarTiempoEnCola(){
+        this.tiempoEnCola ++;
+    }
+
+    public void disminuirTiempoInstrucciones(){
+        this.numeroInstrucciones --;
+    }
+
+    public void aumentarTiempoEjecucion(){
+        this.tiempoEjecucion ++;
     }
 
     @Override
@@ -113,6 +126,14 @@ public class Proceso {
 
     public int getTiempoEjecucion() {
         return tiempoEjecucion;
+    }
+
+    public boolean getRequireBloqueo(){
+        return this.requiereBloqueo;
+    }
+
+    public void setRequireBloqueo(boolean requiereBloqueo){
+        this.requiereBloqueo = requiereBloqueo;
     }
 
     public void setTiempoEjecucion(int tiempoEjecucion) {

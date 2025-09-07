@@ -10,7 +10,7 @@ public class Main {
         final int quantum;
         final int numeroProcesos;
 
-        quantum = random.nextInt(91) + 10;  // quantum entre 10 y 100
+        quantum = 4;//random.nextInt(91) + 10;  // quantum entre 10 y 100
         numeroProcesos = random.nextInt(31); // N procesos entre 0 - 30
         
         //Crear la instancia para el algoritmo
@@ -19,12 +19,6 @@ public class Main {
         administrador.crearColas(numeroColas);
         administrador.crearProcesosEnColas();
 
-        //Imprimir data
-        for(Cola cola: administrador.getColas()){
-            cola.getProcesos().forEach(
-                proceso -> System.out.println(proceso.toString())
-            );
-        }
 
     }
 }
