@@ -55,6 +55,10 @@ public class Proceso {
         this.tiempoCambioContexto ++;
     }
 
+    public void disminuirTiempoBloqueo() {
+        this.tiempoBloqueado --;
+    }
+
     public void ejecutarInstruccion() {
         if (estado == EstadoProceso.Ejecucion && cantidadInstrucciones > 0) {
             cantidadInstrucciones--;

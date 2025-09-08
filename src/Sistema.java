@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Main {
+public class Sistema {
     public static void main(String[] args) {
 
         Random random = new Random();
@@ -13,12 +13,12 @@ public class Main {
         quantum = 4;//random.nextInt(91) + 10;  // quantum entre 10 y 100
         numeroProcesos = random.nextInt(31); // N procesos entre 0 - 30
         
-        //Crear la instancia para el algoritmo
-        AdministradorMLQ administrador = new AdministradorMLQ(cambioContexto, quantum, numeroProcesos);
-
-        administrador.crearColas(numeroColas);
-        administrador.crearProcesosEnColas();
-
+        SimuladorMLQ simulador = new SimuladorMLQ(cambioContexto, quantum, numeroProcesos);
+        
+        //Mostrar datos iniciales
+        System.out.println("Quantum: " + quantum);
+        System.out.println("CDC: " + cambioContexto);
+        System.out.println();
 
     }
 }
