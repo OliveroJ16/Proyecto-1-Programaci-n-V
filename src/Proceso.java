@@ -10,7 +10,7 @@ public class Proceso {
     private int tiempoEnCola;
     private int tiempoEjecucion;
     
-    public Proceso(int idProceso, int idCola, int cantidadInstrucciones, boolean requiereBloqueo, int tiempoBloqueado) {
+    public Proceso(int idProceso, int idCola, int cantidadInstrucciones, boolean requiereBloqueo) {
         this.idProceso = idProceso;
         this.idCola = idCola;
         this.cantidadInstrucciones = cantidadInstrucciones;
@@ -19,7 +19,6 @@ public class Proceso {
         this.tiempoCambioContexto = 0;
         this.tiempoEnCola = 0;
         this.tiempoEjecucion = 0;
-        this.tiempoBloqueado = tiempoBloqueado;
     }
 
     public void listo(){
@@ -62,7 +61,6 @@ public class Proceso {
     public void ejecutarInstruccion() {
         if (estado == EstadoProceso.Ejecucion && cantidadInstrucciones > 0) {
             cantidadInstrucciones--;
-            incrementarTiempoEjecucion();
         }
     }
 
@@ -101,6 +99,10 @@ public class Proceso {
 
     public boolean isRequiereBloqueo() { 
         return requiereBloqueo; 
+    }
+
+    public void setRequerirBloqueo(boolean bloqueo){ 
+        requiereBloqueo = bloqueo; 
     }
 
 }

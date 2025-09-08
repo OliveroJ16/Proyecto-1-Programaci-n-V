@@ -1,17 +1,21 @@
+import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Sistema {
     public static void main(String[] args) {
 
         Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
         
         final int cambioContexto = 1; //Establecer el cambio de contexto
         final int numeroColas = 2; //Establecer el numero de colas
         final int quantum;
         final int numeroProcesos;
 
-        quantum = 4;//random.nextInt(91) + 10;  // quantum entre 10 y 100
-        numeroProcesos = random.nextInt(31); // N procesos entre 0 - 30
+        quantum = random.nextInt(91) + 10;  // quantum entre 10 y 100
+        //numeroProcesos = random.nextInt(31); // N procesos entre 0 - 30
+        numeroProcesos = 8;
         
         SimuladorMLQ simulador = new SimuladorMLQ(cambioContexto, quantum, numeroProcesos);
         
@@ -36,6 +40,18 @@ public class Sistema {
             );
         }
 
-
+        //Iniciar simulacion
+        int contador = 0;
+        List<String> logs = simulador.ejecutarSimulacion();
+        for(String salida : logs){
+            contador ++;
+            System.out.println(salida);
+        
+            if (contador % 10 == 0) {
+                System.out.println("Presiona ENTER para continuar...");
+                scanner.nextLine();
+            }
+        }
+        scanner.close();
     }
 }
