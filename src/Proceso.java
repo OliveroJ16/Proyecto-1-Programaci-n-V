@@ -1,145 +1,102 @@
-import java.util.Random;
-
 public class Proceso {
-    private int id;                    // Identificador del proceso
-    private int idCola;
-    private int numeroInstrucciones;   // Instrucciones restantes
-    private EstadoProceso estado;      // LISTO, EJECUCION, BLOQUEADO, TERMINADO
-    private int tiempoBloqueado;       // Tiempo que estará bloqueado (si aplica)
+
+    private final int idProceso;
+    private final int idCola;
+    private int cantidadInstrucciones;
+    private EstadoProceso estado;
+    private int tiempoCambioContexto;
     private boolean requiereBloqueo;
+    private int tiempoBloqueado;
+    private int tiempoEnCola;
+    private int tiempoEjecucion;
     
-    private int tiempoEnCola;          // Tiempo esperando turno en la cola
-    private int tiempoCambioContexto;  // CDC aplicado a este proceso
-    private int tiempoEjecucion;       // Tiempo que ha estado en CPU
-    
-    public Proceso() {
-    }
-
-    public Proceso(int id, int idCola, int numeroInstrucciones, EstadoProceso estado, int tiempoBloqueado,int tiempoEnCola, int tiempoCambioContexto, int tiempoEjecucion) {
-        this.id = id;
+    public Proceso(int idProceso, int idCola, int cantidadInstrucciones, boolean requiereBloqueo) {
+        this.idProceso = idProceso;
         this.idCola = idCola;
-        this.numeroInstrucciones = numeroInstrucciones;
-        this.estado = estado;
-        this.tiempoBloqueado = tiempoBloqueado;
-        this.tiempoEnCola = tiempoEnCola;
-        this.tiempoCambioContexto = tiempoCambioContexto;
-        this.tiempoEjecucion = tiempoEjecucion;
+        this.cantidadInstrucciones = cantidadInstrucciones;
+        this.requiereBloqueo = requiereBloqueo;
+        this.estado = EstadoProceso.Listo;
+        this.tiempoCambioContexto = 0;
+        this.tiempoEnCola = 0;
+        this.tiempoEjecucion = 0;
+        this.tiempoBloqueado = 0;
     }
 
-    public void simularBloqueado(){
-        Random random = new Random();
-        int duracion = random.nextInt(7) + 2; // Tiempo bloqueado 2 - 8
+    public void listo(){
+        this.estado = EstadoProceso.Listo;
+    }
+
+    public void bloquear(int duracion) {
         this.estado = EstadoProceso.Bloqueado;
-        this.tiempoBloqueado = duracion;;
+        this.tiempoBloqueado = duracion;
     }
 
-
-    public void generarNumeroInstrucciones(){
-        Random random = new Random();
-        int intrucciones = random.nextInt(96) + 5; // N intrucciones entre 5 - 100
-        this.numeroInstrucciones = intrucciones;
+    public void ejecutar() {
+        this.estado = EstadoProceso.Ejecucion;
     }
 
-    public void aumentarTiempoEnCola(){
-        this.tiempoEnCola ++;
+    public void terminar() {
+        this.estado = EstadoProceso.Terminado;
     }
 
-    public void disminuirTiempoInstrucciones(){
-        this.numeroInstrucciones --;
+    public int getTiempoTotal() {
+        return tiempoEjecucion + tiempoEnCola + tiempoBloqueado + tiempoCambioContexto;
     }
 
-    public void aumentarTiempoEjecucion(){
+    public void incrementarTiempoEjecucion() {
         this.tiempoEjecucion ++;
     }
 
-    @Override
-    public String toString() {
-        return "Proceso{" +
-            "id=" + id +
-            ", idCola=" + idCola +
-            ", numeroInstrucciones=" + numeroInstrucciones +
-            ", estado=" + estado +
-            ", tiempoBloqueado=" + tiempoBloqueado +
-            ", tiempoEnCola=" + tiempoEnCola +
-            ", tiempoCambioContexto=" + tiempoCambioContexto +
-            ", tiempoEjecucion=" + tiempoEjecucion +
-            '}';
+    public void incrementarTiempoEnCola() {
+        this.tiempoEnCola ++;
     }
 
-
-    //Getter y Setter
-    public int getId() {
-        return id;
+    public void incrementarTiempoCambioContexto() {
+        this.tiempoCambioContexto ++;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void ejecutarInstruccion() {
+        if (estado == EstadoProceso.Ejecucion && cantidadInstrucciones > 0) {
+            cantidadInstrucciones--;
+            incrementarTiempoEjecucion();
+        }
     }
 
-    public int getIdCola() {
-        return idCola;
+    // Getters
+    public int getIdProceso() { 
+        return idProceso; 
     }
 
-    public void setIdCola(int idCola) {
-        this.idCola = idCola;
+    public int getIdCola() { 
+        return idCola; 
     }
 
-    public int getNumeroInstrucciones() {
-        return numeroInstrucciones;
+    public int getCantidadInstrucciones() { 
+        return cantidadInstrucciones; 
     }
 
-    public void setNumeroInstrucciones(int numeroInstrucciones) {
-        this.numeroInstrucciones = numeroInstrucciones;
+    public EstadoProceso getEstado() { 
+        return estado; 
     }
 
-    public EstadoProceso getEstado() {
-        return estado;
+    public int getTiempoBloqueado() { 
+        return tiempoBloqueado; 
     }
 
-    public void setEstado(EstadoProceso estado) {
-        this.estado = estado;
+    public int getTiempoEnCola() { 
+        return tiempoEnCola; 
     }
-
-    public int getTiempoBloqueado() {
-        return tiempoBloqueado;
-    }
-
-    public void setTiempoBloqueado(int tiempoBloqueado) {
-        this.tiempoBloqueado = tiempoBloqueado;
-    }
-
-    public int getTiempoEnCola() {
-        return tiempoEnCola;
-    }
-
-    public void setTiempoEnCola(int tiempoEnCola) {
-        this.tiempoEnCola = tiempoEnCola;
-    }
-
-    public int getTiempoCambioContexto() {
-        return tiempoCambioContexto;
-    }
-
-    public void setTiempoCambioContexto(int tiempoCambioContexto) {
-        this.tiempoCambioContexto = tiempoCambioContexto;
-    }
-
-    public int getTiempoEjecucion() {
-        return tiempoEjecucion;
-    }
-
-    public boolean getRequireBloqueo(){
-        return this.requiereBloqueo;
-    }
-
-    public void setRequireBloqueo(boolean requiereBloqueo){
-        this.requiereBloqueo = requiereBloqueo;
-    }
-
-    public void setTiempoEjecucion(int tiempoEjecucion) {
-        this.tiempoEjecucion = tiempoEjecucion;
-    }
-
     
+    public int getTiempoCambioContexto() { 
+        return tiempoCambioContexto; 
+    }
+
+    public int getTiempoEjecucion() { 
+        return tiempoEjecucion; 
+    }
+
+    public boolean isRequiereBloqueo() { 
+        return requiereBloqueo; 
+    }
 
 }
