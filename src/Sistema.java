@@ -15,7 +15,7 @@ public class Sistema {
 
         quantum = random.nextInt(91) + 10;  // quantum entre 10 y 100
         //numeroProcesos = random.nextInt(31); // N procesos entre 0 - 30
-        numeroProcesos = 8;
+        numeroProcesos = 8; //Cambiar despues
         
         SimuladorMLQ simulador = new SimuladorMLQ(cambioContexto, quantum, numeroProcesos);
         
@@ -39,7 +39,6 @@ public class Sistema {
                 p.getTiempoBloqueado()
             );
         }
-
         //Iniciar simulacion
         int contador = 0;
         List<String> logs = simulador.ejecutarSimulacion();
@@ -52,6 +51,10 @@ public class Sistema {
                 scanner.nextLine();
             }
         }
+
         scanner.close();
+
+        GestorArchivo gestor = new GestorArchivo("salida_simulacion.txt");
+        gestor.guardarResultados(logs);
     }
 }
