@@ -21,7 +21,21 @@ public class Sistema {
         System.out.println();
 
         simulador.crearProcesos();
-        simulador.mostrarTablaProceso();
+        
+        System.out.printf("%-4s %-4s %-5s %-6s %-3s %-7s %-5s%n", 
+    "Proc", "Cola", "Inst.", "Estado", "CDC", "Bloqueo", "TiempoBlock");
+        for (Proceso p : simulador.obtenerProcesos()) {
+            System.out.printf("P%-4d %-4d %-5d %-6s %-3d %-7s %-5d%n",
+                p.getIdProceso(),
+                p.getIdCola(),
+                p.getCantidadInstrucciones(),
+                p.getEstado(),
+                p.getTiempoCambioContexto(),
+                p.isRequiereBloqueo() ? "Si" : "No",
+                p.getTiempoBloqueado()
+            );
+        }
+
 
     }
 }
