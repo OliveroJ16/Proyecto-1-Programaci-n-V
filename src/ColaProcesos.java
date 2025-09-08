@@ -78,7 +78,7 @@ public class ColaProcesos {
         return procesosTerminados; 
     }
 
-    public List<Proceso> getTodosLosProcesos() { 
+    public List<Proceso> getProcesosActuales() { 
         return procesosActuales; 
     }
     

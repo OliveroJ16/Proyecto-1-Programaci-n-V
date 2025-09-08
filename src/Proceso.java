@@ -10,7 +10,7 @@ public class Proceso {
     private int tiempoEnCola;
     private int tiempoEjecucion;
     
-    public Proceso(int idProceso, int idCola, int cantidadInstrucciones, boolean requiereBloqueo) {
+    public Proceso(int idProceso, int idCola, int cantidadInstrucciones, boolean requiereBloqueo, int tiempoBloqueado) {
         this.idProceso = idProceso;
         this.idCola = idCola;
         this.cantidadInstrucciones = cantidadInstrucciones;
@@ -19,7 +19,7 @@ public class Proceso {
         this.tiempoCambioContexto = 0;
         this.tiempoEnCola = 0;
         this.tiempoEjecucion = 0;
-        this.tiempoBloqueado = 0;
+        this.tiempoBloqueado = tiempoBloqueado;
     }
 
     public void listo(){

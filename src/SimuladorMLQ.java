@@ -43,9 +43,42 @@ public class SimuladorMLQ {
     // Crear los procesos en la cola
     public void crearProcesos(){
         for(int i = 0; i < numeroProcesos; i++){
-            Proceso proceso = new Proceso(i, this.colaProcesos.getIdCola(), new Random().nextInt(2), new Random().nextBoolean());
+            boolean requiereBloqueo = siRequiereBloqueo();
+            int tiempoBloqueado = generarTiempoBloqueo(requiereBloqueo);
+            Proceso proceso = new Proceso(i, this.colaProcesos.getIdCola(), generarNumeroInstrucciones(),requiereBloqueo, tiempoBloqueado);
             colaProcesos.agregarProceso(proceso);
         }
+    }
+
+    public void mostrarTablaProceso(){
+        System.out.printf("%-4s %-4s %-5s %-6s %-3s %-7s %-5s%n", 
+            "Proc", "Cola", "Inst.", "Estado", "CDC", "Bloqueo", "TiempoBlock");
+        
+        for(Proceso proceso : colaProcesos.getProcesosActuales()){
+            String bloqueo = proceso.isRequiereBloqueo() ? "Si" : "No";
+            System.out.printf("P%-4d %-4d %-5d %-6s %-3d %-7s %-5d%n",
+                proceso.getIdProceso(),
+                proceso.getIdCola(),
+                proceso.getCantidadInstrucciones(),
+                proceso.getEstado(),
+                proceso.getTiempoCambioContexto(),
+                bloqueo,
+                proceso.getTiempoBloqueado()
+            );
+        }
+        System.out.println();
+    }
+
+    private int generarNumeroInstrucciones(){
+        return new Random().nextInt(96) + 5; // Tiempo de instrucciones entre 5 y 100
+    }
+
+    private boolean siRequiereBloqueo(){
+        return new Random().nextBoolean();
+    }
+
+    private int generarTiempoBloqueo(boolean requiereBloqueo){
+        return requiereBloqueo ?  new Random().nextInt(7) + 2 : 0; // Tiempo de bloqueo entre 2 y 8
     }
 }
 

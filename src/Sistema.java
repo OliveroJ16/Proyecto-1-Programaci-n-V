@@ -20,5 +20,8 @@ public class Sistema {
         System.out.println("CDC: " + cambioContexto);
         System.out.println();
 
+        simulador.crearProcesos();
+        simulador.mostrarTablaProceso();
+
     }
 }
