@@ -38,8 +38,8 @@ public class ColaProcesos {
         return procesosListos.isEmpty();
     }
 
-    public void bloquearProceso(Proceso proceso, int duracionBloqueo) {
-        proceso.bloquear(duracionBloqueo);;
+    public void bloquearProceso(Proceso proceso) {
+        proceso.bloquear();;
         procesosBloqueados.add(proceso);
     }
 

@@ -25,9 +25,8 @@ public class Proceso {
         this.estado = EstadoProceso.Listo;
     }
 
-    public void bloquear(int duracion) {
+    public void bloquear() {
         this.estado = EstadoProceso.Bloqueado;
-        this.tiempoBloqueado = duracion;
     }
 
     public void ejecutar() {
@@ -83,6 +82,10 @@ public class Proceso {
 
     public int getTiempoBloqueado() { 
         return tiempoBloqueado; 
+    }
+
+    public void asignarTiempoBloqueado(int tiempo){ 
+        this.tiempoBloqueado = tiempo;
     }
 
     public int getTiempoEnCola() { 
