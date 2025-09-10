@@ -19,12 +19,14 @@ public class Proceso {
         this.tiempoCambioContexto = 0;
         this.tiempoEnCola = 0;
         this.tiempoEjecucion = 0;
+        this.tiempoBloqueado = 0;
     }
 
     public void listo(){
         this.estado = EstadoProceso.Listo;
     }
 
+    // bloquear() asume que tiempoBloqueado ya fue asignado (asignarTiempoBloqueado)
     public void bloquear() {
         this.estado = EstadoProceso.Bloqueado;
     }
@@ -84,6 +86,7 @@ public class Proceso {
         return tiempoBloqueado; 
     }
 
+    // Asigna el tiempo de bloqueo (debe ser llamado al crear el proceso cuando requiereBloqueo==true)
     public void asignarTiempoBloqueado(int tiempo){ 
         this.tiempoBloqueado = tiempo;
     }
@@ -107,5 +110,4 @@ public class Proceso {
     public void setRequerirBloqueo(boolean bloqueo){ 
         requiereBloqueo = bloqueo; 
     }
-
 }
