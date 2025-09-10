@@ -99,7 +99,7 @@ public class SimuladorMLQ {
                     ColaProcesos colaSeleccionada = obtenerSiguienteCola();
                     if (colaSeleccionada != null) {
                         procesoEnEjecucion = colaSeleccionada.obtenerProceso();
-                        procesoEnEjecucion.ejecutar();
+                        //procesoEnEjecucion.ejecutar();
                         tiempoRestanteQuantum = quantum;
                     }
                 }
@@ -157,11 +157,24 @@ public class SimuladorMLQ {
         if (colaDelProceso == null)
             return;
 
+
+        //CAMBIOS QUE SE ESTAN REALIZANDO
+        if (procesoEnEjecucion.getSiCambioContexto()) {
+            procesoEnEjecucion.incrementarTiempoCambioContexto();
+            procesoEnEjecucion.listo();
+            procesoEnEjecucion.setSiCambioContexto(false);
+        }else{ 
+            procesoEnEjecucion.ejecutar();
+            procesoEnEjecucion.ejecutarInstruccion();
+            procesoEnEjecucion.incrementarTiempoEjecucion();
+            tiempoTotalEjecucion++;
+        }
+
         // Ejecuta una instrucción en CPU
-        procesoEnEjecucion.ejecutarInstruccion();
-        procesoEnEjecucion.incrementarTiempoEjecucion();
+        //procesoEnEjecucion.ejecutarInstruccion();
+        //procesoEnEjecucion.incrementarTiempoEjecucion();
         tiempoRestanteQuantum--;
-        tiempoTotalEjecucion++;
+        //tiempoTotalEjecucion++;
 
         // --- Verificar BLOQUEO después de ejecutar ---
         if (procesoEnEjecucion.isRequiereBloqueo()) {
@@ -186,9 +199,11 @@ public class SimuladorMLQ {
         else if (procesoEnEjecucion != null && tiempoRestanteQuantum <= 0) {
             procesoEnEjecucion.listo();
             procesoEnEjecucion.incrementarTiempoCambioContexto();
+            procesoEnEjecucion.setSiCambioContexto(true);
             colaDelProceso.reinsertarProceso(procesoEnEjecucion);
             procesoEnEjecucion = null;
             enCambioContexto = true;
+            
         }
     }
 

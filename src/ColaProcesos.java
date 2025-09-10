@@ -56,6 +56,7 @@ public class ColaProcesos {
             
             if (proceso.getTiempoBloqueado() <= 0) {
                 proceso.listo();
+                proceso.incrementarTiempoCambioContexto();
                 procesosListos.offer(proceso);
                 iterator.remove();
             }
