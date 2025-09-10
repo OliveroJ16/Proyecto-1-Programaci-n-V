@@ -7,19 +7,18 @@ public class Sistema {
 
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
-        
-        final int cambioContexto = 1; //Establecer el cambio de contexto
+
+        final int cambioContexto = 1;
         final int quantum;
         final int numeroProcesos;
 
-        quantum = random.nextInt(91) + 10;  // quantum entre 10 y 100
+        quantum = random.nextInt(91) + 10;
 
-        System.out.printf("Ingrese el numero de procesos: ");
+        System.out.print("Ingrese el numero de procesos: ");
         numeroProcesos = scanner.nextInt();
-        
+
         SimuladorMLQ simulador = new SimuladorMLQ(cambioContexto, quantum, numeroProcesos);
-        
-        //Mostrar datos iniciales
+
         System.out.println("Quantum: " + quantum);
         System.out.println("CDC: " + cambioContexto);
         System.out.println();
@@ -28,7 +27,6 @@ public class Sistema {
 
         mostrarProcesosIniciales(simulador.obtenerProcesos());
 
-        //Iniciar simulacion
         List<String> logs = simulador.ejecutarSimulacion();
         mostrarLogsPaginados(logs);
 
@@ -50,8 +48,7 @@ public class Sistema {
                     p.getEstado(),
                     p.getTiempoCambioContexto(),
                     p.isRequiereBloqueo() ? "Si" : "No",
-                    p.getTiempoBloqueado()
-            );
+                    p.getTiempoBloqueado());
         }
         System.out.println();
     }

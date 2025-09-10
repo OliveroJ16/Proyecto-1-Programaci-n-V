@@ -9,7 +9,7 @@ public class Proceso {
     private int tiempoBloqueado;
     private int tiempoEnCola;
     private int tiempoEjecucion;
-    
+
     public Proceso(int idProceso, int idCola, int cantidadInstrucciones, boolean requiereBloqueo) {
         this.idProceso = idProceso;
         this.idCola = idCola;
@@ -19,14 +19,12 @@ public class Proceso {
         this.tiempoCambioContexto = 0;
         this.tiempoEnCola = 0;
         this.tiempoEjecucion = 0;
-        this.tiempoBloqueado = 0;
     }
 
-    public void listo(){
+    public void listo() {
         this.estado = EstadoProceso.Listo;
     }
 
-    // bloquear() asume que tiempoBloqueado ya fue asignado (asignarTiempoBloqueado)
     public void bloquear() {
         this.estado = EstadoProceso.Bloqueado;
     }
@@ -44,19 +42,19 @@ public class Proceso {
     }
 
     public void incrementarTiempoEjecucion() {
-        this.tiempoEjecucion ++;
+        this.tiempoEjecucion++;
     }
 
     public void incrementarTiempoEnCola() {
-        this.tiempoEnCola ++;
+        this.tiempoEnCola++;
     }
 
     public void incrementarTiempoCambioContexto() {
-        this.tiempoCambioContexto ++;
+        this.tiempoCambioContexto++;
     }
 
     public void disminuirTiempoBloqueo() {
-        this.tiempoBloqueado --;
+        this.tiempoBloqueado--;
     }
 
     public void ejecutarInstruccion() {
@@ -66,48 +64,47 @@ public class Proceso {
     }
 
     // Getters
-    public int getIdProceso() { 
-        return idProceso; 
+    public int getIdProceso() {
+        return idProceso;
     }
 
-    public int getIdCola() { 
-        return idCola; 
+    public int getIdCola() {
+        return idCola;
     }
 
-    public int getCantidadInstrucciones() { 
-        return cantidadInstrucciones; 
+    public int getCantidadInstrucciones() {
+        return cantidadInstrucciones;
     }
 
-    public EstadoProceso getEstado() { 
-        return estado; 
+    public EstadoProceso getEstado() {
+        return estado;
     }
 
-    public int getTiempoBloqueado() { 
-        return tiempoBloqueado; 
+    public int getTiempoBloqueado() {
+        return tiempoBloqueado;
     }
 
-    // Asigna el tiempo de bloqueo (debe ser llamado al crear el proceso cuando requiereBloqueo==true)
-    public void asignarTiempoBloqueado(int tiempo){ 
+    public void asignarTiempoBloqueado(int tiempo) {
         this.tiempoBloqueado = tiempo;
     }
 
-    public int getTiempoEnCola() { 
-        return tiempoEnCola; 
-    }
-    
-    public int getTiempoCambioContexto() { 
-        return tiempoCambioContexto; 
+    public int getTiempoEnCola() {
+        return tiempoEnCola;
     }
 
-    public int getTiempoEjecucion() { 
-        return tiempoEjecucion; 
+    public int getTiempoCambioContexto() {
+        return tiempoCambioContexto;
     }
 
-    public boolean isRequiereBloqueo() { 
-        return requiereBloqueo; 
+    public int getTiempoEjecucion() {
+        return tiempoEjecucion;
     }
 
-    public void setRequerirBloqueo(boolean bloqueo){ 
-        requiereBloqueo = bloqueo; 
+    public boolean isRequiereBloqueo() {
+        return requiereBloqueo;
+    }
+
+    public void setRequerirBloqueo(boolean bloqueo) {
+        requiereBloqueo = bloqueo;
     }
 }

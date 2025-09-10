@@ -6,16 +6,16 @@ public class SimuladorMLQ {
 
     private static final Random random = new Random();
     private final int quantum;
-    private final int cambioContexto;        // en ms (por especificación: 1 ms)
+    private final int cambioContexto;
     private int numeroProcesos;
-    private List<ColaProcesos> colas;        // varias colas MLQ
+    private List<ColaProcesos> colas;
     private Proceso procesoEnEjecucion;
-    private int tiempoActual;
+    private int tiempoAcual;
     private int tiempoRestanteQuantum;
     private boolean enCambioContexto;
-    private int colaActual; // índice para intercalar colas
+    private int colaActual;
 
-    // métricas
+    // Métricas
     private int tiempoTotalEjecucion;
     private int tiempoTotalCambioContexto;
     private int tiempoTotalBloqueo;
@@ -27,7 +27,7 @@ public class SimuladorMLQ {
         this.numeroProcesos = numeroProcesos;
         this.colas = new ArrayList<>();
         this.procesoEnEjecucion = null;
-        this.tiempoActual = 0;
+        this.tiempoAcual = 0;
         this.tiempoRestanteQuantum = 0;
         this.enCambioContexto = false;
         this.colaActual = 0;
@@ -37,157 +37,84 @@ public class SimuladorMLQ {
         this.tiempoTotalEspera = 0;
     }
 
-    // Crear 2 colas y repartir procesos (mitad y mitad)
+    // Crear los procesos en las colas
     public void crearProcesos() {
-        // Aseguramos 2 colas (especificación)
-        int numColas = 2;
-        for (int i = 0; i < numColas; i++) {
+        for (int i = 0; i < 2; i++) {
             ColaProcesos cola = new ColaProcesos(i + 1);
-            this.colas.add(cola);
-        }
-
-        // Repartir procesos entre las 2 colas
-        int mitad = numeroProcesos / 2;
-        int id = 0;
-        for (int i = 0; i < numColas; i++) {
-            int toCreate = (i == 0) ? mitad + (numeroProcesos % 2) : mitad; // si impar, cola 0 recibe 1 extra
-            for (int j = 0; j < toCreate; j++) {
+            for (int j = 0; j < numeroProcesos / 2; j++) {
+                int idProceso = i * (numeroProcesos / 2) + j;
                 boolean requiereBloqueo = random.nextBoolean();
-                Proceso p = new Proceso(id, colas.get(i).getIdCola(), random.nextInt(96) + 5, requiereBloqueo);
+
+                Proceso proceso = new Proceso(
+                        idProceso,
+                        cola.getIdCola(),
+                        random.nextInt(96) + 5,
+                        requiereBloqueo);
+
                 if (requiereBloqueo) {
-                    // asignar tiempo de bloqueo (2-8 ms) al crear
-                    p.asignarTiempoBloqueado(random.nextInt(7) + 2);
+                    proceso.asignarTiempoBloqueado(random.nextInt(7) + 2);
                 }
-                colas.get(i).agregarProceso(p);
-                id++;
+                cola.agregarProceso(proceso);
             }
+            this.colas.add(cola);
         }
     }
 
-    // busca la siguiente cola con procesosListos (intercalado RR entre colas)
+    // Round Robin entre colas
     private ColaProcesos obtenerSiguienteCola() {
-        int intentos = 0;
-        int start = colaActual;
-        while (intentos < colas.size()) {
+        for (int i = 0; i < colas.size(); i++) {
             ColaProcesos cola = colas.get(colaActual);
-            colaActual = (colaActual + 1) % colas.size(); // mueve el puntero para la próxima vez (intercalado)
+            colaActual = (colaActual + 1) % colas.size();
             if (!cola.procesosListosVacia()) {
                 return cola;
             }
-            intentos++;
         }
-        return null; // ninguna cola tiene procesos listos
+        return null;
     }
 
-    // Aplica el CDC cuando cambiamos de proceso (lo cuenta en el proceso que perdió CPU)
-    private void aplicarCambioContexto(Proceso procesoQueSale) {
-        if (procesoQueSale != null) {
-            procesoQueSale.incrementarTiempoCambioContexto(); // al proceso que pierde CPU
-        }
-        tiempoActual += cambioContexto;
-        tiempoTotalCambioContexto += cambioContexto;
-    }
-
-    // Loop principal (por milisegundo)
     public List<String> ejecutarSimulacion() {
         List<String> infoActual = new ArrayList<>();
 
         while (!simulacionCompleta()) {
-            infoActual.add("Tiempo actual: " + tiempoActual);
+            infoActual.add("Tiempo actual: " + tiempoAcual);
 
-            // reducir bloqueos en todas las colas (y mover a listo si terminó)
             for (ColaProcesos cola : colas) {
                 cola.procesarBloqueados();
             }
 
-            // Si no hay proceso en ejecucion, obtener uno intercalando colas
-            if (procesoEnEjecucion == null) {
-                ColaProcesos colaSeleccionada = obtenerSiguienteCola();
-                if (colaSeleccionada != null) {
-                    Proceso nuevo = colaSeleccionada.obtenerProceso();
-                    if (nuevo != null) {
-                        // Si va a entrar un nuevo proceso y hubo un proceso previo, aplicar CDC
-                        aplicarCambioContexto(null); // aplicamos CDC como latencia al asignar CPU (especificación)
-                        procesoEnEjecucion = nuevo;
+            if (enCambioContexto) {
+                enCambioContexto = false;
+                tiempoTotalCambioContexto++; // 🔹 solo +1
+            } else {
+                if (procesoEnEjecucion == null) {
+                    ColaProcesos colaSeleccionada = obtenerSiguienteCola();
+                    if (colaSeleccionada != null) {
+                        procesoEnEjecucion = colaSeleccionada.obtenerProceso();
                         procesoEnEjecucion.ejecutar();
                         tiempoRestanteQuantum = quantum;
                     }
                 }
-            }
-
-            // Ejecutar 1 ms/instrucción del proceso en CPU
-            if (procesoEnEjecucion != null) {
-                // encontrar la cola del proceso actual
-                ColaProcesos colaDelProceso = null;
-                for (ColaProcesos cola : colas) {
-                    if (cola.getProcesosActuales().contains(procesoEnEjecucion)) {
-                        colaDelProceso = cola;
-                        break;
-                    }
-                }
-
-                // Ejecuta 1 instrucción
-                procesoEnEjecucion.ejecutarInstruccion();
-                procesoEnEjecucion.incrementarTiempoEjecucion();
-                tiempoRestanteQuantum--;
-                tiempoTotalEjecucion++;
-                
-                // VERIFICAR BLOQUEO: solo puede bloquearse si requiereBloqueo y ya ejecutó al menos 1 instrucción
-                if (procesoEnEjecucion.isRequiereBloqueo() && procesoEnEjecucion.getTiempoEjecucion() >= 1) {
-                    // bloquear ahora
-                    procesoEnEjecucion.setRequerirBloqueo(false); // evitar re-bloqueos
-                    procesoEnEjecucion.incrementarTiempoCambioContexto();
-                    // movemos a bloqueados en su cola
-                    if (colaDelProceso != null) {
-                        colaDelProceso.bloquearProceso(procesoEnEjecucion);
-                    }
-                    // contabilizar bloqueo (ya el tiempo de bloqueo fue asignado al crear)
-                    tiempoTotalBloqueo += procesoEnEjecucion.getTiempoBloqueado();
-                    // hay cambio de contexto porque sale de CPU
-                    aplicarCambioContexto(procesoEnEjecucion);
-                    procesoEnEjecucion = null;
-                } 
-                else if (procesoEnEjecucion.getCantidadInstrucciones() <= 0) {
-                    // TERMINÓ
-                    if (colaDelProceso != null) {
-                        colaDelProceso.terminarProceso(procesoEnEjecucion); // esto también remueve de procesosActuales
-                    }
-                    aplicarCambioContexto(procesoEnEjecucion); // CDC al quitar del CPU
-                    procesoEnEjecucion = null;
-                } 
-                else if (tiempoRestanteQuantum <= 0) {
-                    // Quantum agotado: volver a listo y reinsertar al final de su cola
-                    procesoEnEjecucion.listo();
-                    procesoEnEjecucion.incrementarTiempoCambioContexto();
-                    if (colaDelProceso != null) {
-                        colaDelProceso.reinsertarProceso(procesoEnEjecucion);
-                    }
-                    aplicarCambioContexto(procesoEnEjecucion);
-                    procesoEnEjecucion = null;
+                if (procesoEnEjecucion != null) {
+                    ejecutarProceso();
                 }
             }
 
-            // Actualizar tiempos de espera (todos los procesos listos que no estén en CPU)
-            actualizarTiemposEspera();
-
-            // Añadir snapshot de estado
+            tiempoAcual++;
+            actualizarTiempos();
             infoActual.add(mostrarTablaEstado());
-
-            // avanzar tiempo global (si no avanzamos ya por CDC; CDC ya suma tiempoActual)
-            tiempoActual++;
         }
         return infoActual;
     }
 
-    private void actualizarTiemposEspera() {
+    private void actualizarTiempos() {
         for (ColaProcesos cola : colas) {
-            for (Proceso p : cola.getProcesosActuales()) {
-                if (p.getEstado() == EstadoProceso.Listo && p != procesoEnEjecucion) {
-                    p.incrementarTiempoEnCola();
+            for (Proceso proceso : cola.getProcesosActuales()) {
+                if (proceso.getEstado() == EstadoProceso.Listo && proceso != procesoEnEjecucion) {
+                    proceso.incrementarTiempoEnCola();
                     tiempoTotalEspera++;
                 }
-                if (p.getEstado() == EstadoProceso.Bloqueado) {
-                    // contabilizado en procesarBloqueados con disminución; ya contamos el totalBloqueo cuando se bloqueó
+                if (proceso.getEstado() == EstadoProceso.Bloqueado) {
+                    tiempoTotalBloqueo++;
                 }
             }
         }
@@ -201,17 +128,70 @@ public class SimuladorMLQ {
         return totalTerminados == numeroProcesos;
     }
 
+    private void aplicarCambioContexto(Proceso proceso) {
+        if (proceso != null) {
+            proceso.incrementarTiempoCambioContexto();
+        }
+        tiempoTotalCambioContexto++; // 🔹 solo +1 global
+    }
+
+    public void ejecutarProceso() {
+        if (procesoEnEjecucion == null) return;
+
+        ColaProcesos colaDelProceso = null;
+        for (ColaProcesos cola : colas) {
+            if (cola.getProcesosActuales().contains(procesoEnEjecucion)) {
+                colaDelProceso = cola;
+                break;
+            }
+        }
+
+        if (colaDelProceso == null) return;
+
+        procesoEnEjecucion.ejecutarInstruccion();
+        procesoEnEjecucion.incrementarTiempoEjecucion();
+        tiempoRestanteQuantum--;
+        tiempoTotalEjecucion++;
+
+        // Bloqueo
+        if (procesoEnEjecucion.isRequiereBloqueo() &&
+            procesoEnEjecucion.getTiempoEjecucion() > 1) {
+            procesoEnEjecucion.setRequerirBloqueo(false);
+            colaDelProceso.bloquearProceso(procesoEnEjecucion);
+            aplicarCambioContexto(procesoEnEjecucion);
+            enCambioContexto = true;
+            procesoEnEjecucion = null;
+            return;
+        }
+
+        // Terminó
+        if (procesoEnEjecucion.getCantidadInstrucciones() <= 0) {
+            colaDelProceso.terminarProceso(procesoEnEjecucion);
+            aplicarCambioContexto(procesoEnEjecucion);
+            procesoEnEjecucion = null;
+            enCambioContexto = true;
+        }
+        // Quantum agotado
+        else if (tiempoRestanteQuantum <= 0) {
+            procesoEnEjecucion.listo();
+            colaDelProceso.reinsertarProceso(procesoEnEjecucion);
+            aplicarCambioContexto(procesoEnEjecucion);
+            procesoEnEjecucion = null;
+            enCambioContexto = true;
+        }
+    }
+
     private String mostrarTablaEstado() {
         StringBuilder sb = new StringBuilder();
         sb.append("\n");
-        sb.append(String.format("%-6s %-6s %-6s %-6s %-9s %-3s %-7s %-5s %-5s%n",
-                "Proc", "IdCola", "T.enCol", "Inst.", "Estado", "CDC", "Bloqueo", "Exe", "Total"));
-        sb.append("-------------------------------------------------------------------\n");
+        sb.append(String.format("%-4s %-5s %-6s %-5s %-9s %-3s %-7s %-5s %-5s%n",
+                "Proc", "IdCola", "EnCola", "Inst.", "Estado", "CDC", "Bloqueo", "Exe", "Time"));
+        sb.append("----------------------------------------------------------\n");
 
+        int contadorCola = 0;
         for (ColaProcesos cola : colas) {
-            sb.append(String.format("--- Cola %d ---\n", cola.getIdCola()));
             for (Proceso proceso : cola.getProcesosActuales()) {
-                sb.append(String.format("P%-5d %-6d %-6d %-6d %-9s %-3d %-7d %-5d %-5d%n",
+                sb.append(String.format("P%-4d %-5d %-6d %-5d %-9s %-3d %-7d %-5d %-5d%n",
                         proceso.getIdProceso(),
                         proceso.getIdCola(),
                         proceso.getTiempoEnCola(),
@@ -222,10 +202,13 @@ public class SimuladorMLQ {
                         proceso.getTiempoEjecucion(),
                         proceso.getTiempoTotal()));
             }
-            sb.append("-------------------------------------------------------------------\n");
+            contadorCola++;
+            if (contadorCola < colas.size()) {
+                sb.append("----------------------------------------------------------\n");
+            }
         }
-
-        sb.append(String.format("Proceso en ejecucion: %s%n",
+        sb.append("----------------------------------------------------------\n");
+        sb.append(String.format("Proceso en ejecución: %s%n",
                 procesoEnEjecucion != null ? "P" + procesoEnEjecucion.getIdProceso() : "Ninguno"));
 
         return sb.toString();
@@ -245,7 +228,7 @@ public class SimuladorMLQ {
         System.out.println("Tiempo total de cambio de contexto: " + tiempoTotalCambioContexto);
         System.out.println("Tiempo total de bloqueo: " + tiempoTotalBloqueo);
         System.out.println("Tiempo total de espera en cola: " + tiempoTotalEspera);
-        System.out.println("Tiempo total de simulación: " + tiempoActual);
+        System.out.println("Tiempo total de simulación: " + tiempoAcual);
 
         for (int i = 0; i < colas.size(); i++) {
             ColaProcesos cola = colas.get(i);
@@ -253,11 +236,4 @@ public class SimuladorMLQ {
                     cola.getProcesosTerminados().size());
         }
     }
-
-    public ColaProcesos getCola(int indice) {
-        if (indice >= 0 && indice < colas.size()) return colas.get(indice);
-        return null;
-    }
-
-    public List<ColaProcesos> getColas() { return colas; }
 }

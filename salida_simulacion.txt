@@ -3,12 +3,13 @@ Tiempo actual: 0
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      42     Ejecucion 0   0       1     1    
-P1     1      1      9      Listo     0   7       0     8    
+P0     1      0      30     Ejecucion 0   0       1     1    
+P1     1      1      67     Listo     0   8       0     9    
+P2     1      1      87     Listo     0   0       0     1    
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      1      60     Listo     0   0       0     1    
-P3     2      1      16     Listo     0   0       0     1    
+P3     2      1      32     Listo     0   3       0     4    
+P4     2      1      67     Listo     0   0       0     1    
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -17,12 +18,13 @@ Tiempo actual: 2
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      41     Ejecucion 0   0       2     2    
-P1     1      2      9      Listo     0   7       0     9    
+P0     1      0      29     Ejecucion 0   0       2     2    
+P1     1      2      67     Listo     0   8       0     10   
+P2     1      2      87     Listo     0   0       0     2    
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      2      60     Listo     0   0       0     2    
-P3     2      2      16     Listo     0   0       0     2    
+P3     2      2      32     Listo     0   3       0     5    
+P4     2      2      67     Listo     0   0       0     2    
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -31,12 +33,13 @@ Tiempo actual: 3
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      40     Ejecucion 0   0       3     3    
-P1     1      3      9      Listo     0   7       0     10   
+P0     1      0      28     Ejecucion 0   0       3     3    
+P1     1      3      67     Listo     0   8       0     11   
+P2     1      3      87     Listo     0   0       0     3    
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      3      60     Listo     0   0       0     3    
-P3     2      3      16     Listo     0   0       0     3    
+P3     2      3      32     Listo     0   3       0     6    
+P4     2      3      67     Listo     0   0       0     3    
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -45,12 +48,13 @@ Tiempo actual: 4
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      39     Ejecucion 0   0       4     4    
-P1     1      4      9      Listo     0   7       0     11   
+P0     1      0      27     Ejecucion 0   0       4     4    
+P1     1      4      67     Listo     0   8       0     12   
+P2     1      4      87     Listo     0   0       0     4    
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      4      60     Listo     0   0       0     4    
-P3     2      4      16     Listo     0   0       0     4    
+P3     2      4      32     Listo     0   3       0     7    
+P4     2      4      67     Listo     0   0       0     4    
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -59,12 +63,13 @@ Tiempo actual: 5
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      38     Ejecucion 0   0       5     5    
-P1     1      5      9      Listo     0   7       0     12   
+P0     1      0      26     Ejecucion 0   0       5     5    
+P1     1      5      67     Listo     0   8       0     13   
+P2     1      5      87     Listo     0   0       0     5    
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      5      60     Listo     0   0       0     5    
-P3     2      5      16     Listo     0   0       0     5    
+P3     2      5      32     Listo     0   3       0     8    
+P4     2      5      67     Listo     0   0       0     5    
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -73,12 +78,13 @@ Tiempo actual: 6
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      37     Ejecucion 0   0       6     6    
-P1     1      6      9      Listo     0   7       0     13   
+P0     1      0      25     Ejecucion 0   0       6     6    
+P1     1      6      67     Listo     0   8       0     14   
+P2     1      6      87     Listo     0   0       0     6    
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      6      60     Listo     0   0       0     6    
-P3     2      6      16     Listo     0   0       0     6    
+P3     2      6      32     Listo     0   3       0     9    
+P4     2      6      67     Listo     0   0       0     6    
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -87,12 +93,13 @@ Tiempo actual: 7
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      36     Ejecucion 0   0       7     7    
-P1     1      7      9      Listo     0   7       0     14   
+P0     1      0      24     Ejecucion 0   0       7     7    
+P1     1      7      67     Listo     0   8       0     15   
+P2     1      7      87     Listo     0   0       0     7    
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      7      60     Listo     0   0       0     7    
-P3     2      7      16     Listo     0   0       0     7    
+P3     2      7      32     Listo     0   3       0     10   
+P4     2      7      67     Listo     0   0       0     7    
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -101,12 +108,13 @@ Tiempo actual: 8
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      35     Ejecucion 0   0       8     8    
-P1     1      8      9      Listo     0   7       0     15   
+P0     1      0      23     Ejecucion 0   0       8     8    
+P1     1      8      67     Listo     0   8       0     16   
+P2     1      8      87     Listo     0   0       0     8    
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      8      60     Listo     0   0       0     8    
-P3     2      8      16     Listo     0   0       0     8    
+P3     2      8      32     Listo     0   3       0     11   
+P4     2      8      67     Listo     0   0       0     8    
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -115,12 +123,13 @@ Tiempo actual: 9
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      34     Ejecucion 0   0       9     9    
-P1     1      9      9      Listo     0   7       0     16   
+P0     1      0      22     Ejecucion 0   0       9     9    
+P1     1      9      67     Listo     0   8       0     17   
+P2     1      9      87     Listo     0   0       0     9    
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      9      60     Listo     0   0       0     9    
-P3     2      9      16     Listo     0   0       0     9    
+P3     2      9      32     Listo     0   3       0     12   
+P4     2      9      67     Listo     0   0       0     9    
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -129,12 +138,13 @@ Tiempo actual: 10
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      33     Ejecucion 0   0       10    10   
-P1     1      10     9      Listo     0   7       0     17   
+P0     1      0      21     Ejecucion 0   0       10    10   
+P1     1      10     67     Listo     0   8       0     18   
+P2     1      10     87     Listo     0   0       0     10   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      10     60     Listo     0   0       0     10   
-P3     2      10     16     Listo     0   0       0     10   
+P3     2      10     32     Listo     0   3       0     13   
+P4     2      10     67     Listo     0   0       0     10   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -143,12 +153,13 @@ Tiempo actual: 11
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      32     Ejecucion 0   0       11    11   
-P1     1      11     9      Listo     0   7       0     18   
+P0     1      0      20     Ejecucion 0   0       11    11   
+P1     1      11     67     Listo     0   8       0     19   
+P2     1      11     87     Listo     0   0       0     11   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      11     60     Listo     0   0       0     11   
-P3     2      11     16     Listo     0   0       0     11   
+P3     2      11     32     Listo     0   3       0     14   
+P4     2      11     67     Listo     0   0       0     11   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -157,12 +168,13 @@ Tiempo actual: 12
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      31     Ejecucion 0   0       12    12   
-P1     1      12     9      Listo     0   7       0     19   
+P0     1      0      19     Ejecucion 0   0       12    12   
+P1     1      12     67     Listo     0   8       0     20   
+P2     1      12     87     Listo     0   0       0     12   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      12     60     Listo     0   0       0     12   
-P3     2      12     16     Listo     0   0       0     12   
+P3     2      12     32     Listo     0   3       0     15   
+P4     2      12     67     Listo     0   0       0     12   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -171,12 +183,13 @@ Tiempo actual: 13
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      30     Ejecucion 0   0       13    13   
-P1     1      13     9      Listo     0   7       0     20   
+P0     1      0      18     Ejecucion 0   0       13    13   
+P1     1      13     67     Listo     0   8       0     21   
+P2     1      13     87     Listo     0   0       0     13   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      13     60     Listo     0   0       0     13   
-P3     2      13     16     Listo     0   0       0     13   
+P3     2      13     32     Listo     0   3       0     16   
+P4     2      13     67     Listo     0   0       0     13   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -185,12 +198,13 @@ Tiempo actual: 14
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      29     Ejecucion 0   0       14    14   
-P1     1      14     9      Listo     0   7       0     21   
+P0     1      0      17     Ejecucion 0   0       14    14   
+P1     1      14     67     Listo     0   8       0     22   
+P2     1      14     87     Listo     0   0       0     14   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      14     60     Listo     0   0       0     14   
-P3     2      14     16     Listo     0   0       0     14   
+P3     2      14     32     Listo     0   3       0     17   
+P4     2      14     67     Listo     0   0       0     14   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -199,12 +213,13 @@ Tiempo actual: 15
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      28     Ejecucion 0   0       15    15   
-P1     1      15     9      Listo     0   7       0     22   
+P0     1      0      16     Ejecucion 0   0       15    15   
+P1     1      15     67     Listo     0   8       0     23   
+P2     1      15     87     Listo     0   0       0     15   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      15     60     Listo     0   0       0     15   
-P3     2      15     16     Listo     0   0       0     15   
+P3     2      15     32     Listo     0   3       0     18   
+P4     2      15     67     Listo     0   0       0     15   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -213,12 +228,13 @@ Tiempo actual: 16
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      27     Ejecucion 0   0       16    16   
-P1     1      16     9      Listo     0   7       0     23   
+P0     1      0      15     Ejecucion 0   0       16    16   
+P1     1      16     67     Listo     0   8       0     24   
+P2     1      16     87     Listo     0   0       0     16   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      16     60     Listo     0   0       0     16   
-P3     2      16     16     Listo     0   0       0     16   
+P3     2      16     32     Listo     0   3       0     19   
+P4     2      16     67     Listo     0   0       0     16   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -227,12 +243,13 @@ Tiempo actual: 17
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      26     Ejecucion 0   0       17    17   
-P1     1      17     9      Listo     0   7       0     24   
+P0     1      0      14     Ejecucion 0   0       17    17   
+P1     1      17     67     Listo     0   8       0     25   
+P2     1      17     87     Listo     0   0       0     17   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      17     60     Listo     0   0       0     17   
-P3     2      17     16     Listo     0   0       0     17   
+P3     2      17     32     Listo     0   3       0     20   
+P4     2      17     67     Listo     0   0       0     17   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -241,12 +258,13 @@ Tiempo actual: 18
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      25     Ejecucion 0   0       18    18   
-P1     1      18     9      Listo     0   7       0     25   
+P0     1      0      13     Ejecucion 0   0       18    18   
+P1     1      18     67     Listo     0   8       0     26   
+P2     1      18     87     Listo     0   0       0     18   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      18     60     Listo     0   0       0     18   
-P3     2      18     16     Listo     0   0       0     18   
+P3     2      18     32     Listo     0   3       0     21   
+P4     2      18     67     Listo     0   0       0     18   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -255,12 +273,13 @@ Tiempo actual: 19
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      24     Ejecucion 0   0       19    19   
-P1     1      19     9      Listo     0   7       0     26   
+P0     1      0      12     Ejecucion 0   0       19    19   
+P1     1      19     67     Listo     0   8       0     27   
+P2     1      19     87     Listo     0   0       0     19   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      19     60     Listo     0   0       0     19   
-P3     2      19     16     Listo     0   0       0     19   
+P3     2      19     32     Listo     0   3       0     22   
+P4     2      19     67     Listo     0   0       0     19   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -269,12 +288,13 @@ Tiempo actual: 20
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      23     Ejecucion 0   0       20    20   
-P1     1      20     9      Listo     0   7       0     27   
+P0     1      0      11     Ejecucion 0   0       20    20   
+P1     1      20     67     Listo     0   8       0     28   
+P2     1      20     87     Listo     0   0       0     20   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      20     60     Listo     0   0       0     20   
-P3     2      20     16     Listo     0   0       0     20   
+P3     2      20     32     Listo     0   3       0     23   
+P4     2      20     67     Listo     0   0       0     20   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -283,12 +303,13 @@ Tiempo actual: 21
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      22     Ejecucion 0   0       21    21   
-P1     1      21     9      Listo     0   7       0     28   
+P0     1      0      10     Ejecucion 0   0       21    21   
+P1     1      21     67     Listo     0   8       0     29   
+P2     1      21     87     Listo     0   0       0     21   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      21     60     Listo     0   0       0     21   
-P3     2      21     16     Listo     0   0       0     21   
+P3     2      21     32     Listo     0   3       0     24   
+P4     2      21     67     Listo     0   0       0     21   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -297,12 +318,13 @@ Tiempo actual: 22
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      21     Ejecucion 0   0       22    22   
-P1     1      22     9      Listo     0   7       0     29   
+P0     1      0      9      Ejecucion 0   0       22    22   
+P1     1      22     67     Listo     0   8       0     30   
+P2     1      22     87     Listo     0   0       0     22   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      22     60     Listo     0   0       0     22   
-P3     2      22     16     Listo     0   0       0     22   
+P3     2      22     32     Listo     0   3       0     25   
+P4     2      22     67     Listo     0   0       0     22   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -311,12 +333,13 @@ Tiempo actual: 23
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      20     Ejecucion 0   0       23    23   
-P1     1      23     9      Listo     0   7       0     30   
+P0     1      0      8      Ejecucion 0   0       23    23   
+P1     1      23     67     Listo     0   8       0     31   
+P2     1      23     87     Listo     0   0       0     23   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      23     60     Listo     0   0       0     23   
-P3     2      23     16     Listo     0   0       0     23   
+P3     2      23     32     Listo     0   3       0     26   
+P4     2      23     67     Listo     0   0       0     23   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -325,12 +348,13 @@ Tiempo actual: 24
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      19     Ejecucion 0   0       24    24   
-P1     1      24     9      Listo     0   7       0     31   
+P0     1      0      7      Ejecucion 0   0       24    24   
+P1     1      24     67     Listo     0   8       0     32   
+P2     1      24     87     Listo     0   0       0     24   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      24     60     Listo     0   0       0     24   
-P3     2      24     16     Listo     0   0       0     24   
+P3     2      24     32     Listo     0   3       0     27   
+P4     2      24     67     Listo     0   0       0     24   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -339,12 +363,13 @@ Tiempo actual: 25
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      18     Ejecucion 0   0       25    25   
-P1     1      25     9      Listo     0   7       0     32   
+P0     1      0      6      Ejecucion 0   0       25    25   
+P1     1      25     67     Listo     0   8       0     33   
+P2     1      25     87     Listo     0   0       0     25   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      25     60     Listo     0   0       0     25   
-P3     2      25     16     Listo     0   0       0     25   
+P3     2      25     32     Listo     0   3       0     28   
+P4     2      25     67     Listo     0   0       0     25   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -353,12 +378,13 @@ Tiempo actual: 26
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      17     Ejecucion 0   0       26    26   
-P1     1      26     9      Listo     0   7       0     33   
+P0     1      0      5      Ejecucion 0   0       26    26   
+P1     1      26     67     Listo     0   8       0     34   
+P2     1      26     87     Listo     0   0       0     26   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      26     60     Listo     0   0       0     26   
-P3     2      26     16     Listo     0   0       0     26   
+P3     2      26     32     Listo     0   3       0     29   
+P4     2      26     67     Listo     0   0       0     26   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -367,12 +393,13 @@ Tiempo actual: 27
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      16     Ejecucion 0   0       27    27   
-P1     1      27     9      Listo     0   7       0     34   
+P0     1      0      4      Ejecucion 0   0       27    27   
+P1     1      27     67     Listo     0   8       0     35   
+P2     1      27     87     Listo     0   0       0     27   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      27     60     Listo     0   0       0     27   
-P3     2      27     16     Listo     0   0       0     27   
+P3     2      27     32     Listo     0   3       0     30   
+P4     2      27     67     Listo     0   0       0     27   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -381,12 +408,13 @@ Tiempo actual: 28
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      15     Ejecucion 0   0       28    28   
-P1     1      28     9      Listo     0   7       0     35   
+P0     1      0      3      Ejecucion 0   0       28    28   
+P1     1      28     67     Listo     0   8       0     36   
+P2     1      28     87     Listo     0   0       0     28   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      28     60     Listo     0   0       0     28   
-P3     2      28     16     Listo     0   0       0     28   
+P3     2      28     32     Listo     0   3       0     31   
+P4     2      28     67     Listo     0   0       0     28   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -395,12 +423,13 @@ Tiempo actual: 29
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      14     Ejecucion 0   0       29    29   
-P1     1      29     9      Listo     0   7       0     36   
+P0     1      0      2      Ejecucion 0   0       29    29   
+P1     1      29     67     Listo     0   8       0     37   
+P2     1      29     87     Listo     0   0       0     29   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      29     60     Listo     0   0       0     29   
-P3     2      29     16     Listo     0   0       0     29   
+P3     2      29     32     Listo     0   3       0     32   
+P4     2      29     67     Listo     0   0       0     29   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -409,12 +438,13 @@ Tiempo actual: 30
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      13     Ejecucion 0   0       30    30   
-P1     1      30     9      Listo     0   7       0     37   
+P0     1      0      1      Ejecucion 0   0       30    30   
+P1     1      30     67     Listo     0   8       0     38   
+P2     1      30     87     Listo     0   0       0     30   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      30     60     Listo     0   0       0     30   
-P3     2      30     16     Listo     0   0       0     30   
+P3     2      30     32     Listo     0   3       0     33   
+P4     2      30     67     Listo     0   0       0     30   
 -------------------------------------------------------------------
 Proceso en ejecucion: P0
 
@@ -423,1242 +453,3284 @@ Tiempo actual: 31
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      12     Ejecucion 0   0       31    31   
-P1     1      31     9      Listo     0   7       0     38   
+P1     1      31     67     Listo     0   8       0     39   
+P2     1      31     87     Listo     0   0       0     31   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      31     60     Listo     0   0       0     31   
-P3     2      31     16     Listo     0   0       0     31   
+P3     2      31     32     Listo     0   3       0     34   
+P4     2      31     67     Listo     0   0       0     31   
 -------------------------------------------------------------------
-Proceso en ejecucion: P0
-
-Tiempo actual: 32
-
-Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
--------------------------------------------------------------------
---- Cola 1 ---
-P0     1      0      11     Ejecucion 0   0       32    32   
-P1     1      32     9      Listo     0   7       0     39   
--------------------------------------------------------------------
---- Cola 2 ---
-P2     2      32     60     Listo     0   0       0     32   
-P3     2      32     16     Listo     0   0       0     32   
--------------------------------------------------------------------
-Proceso en ejecucion: P0
+Proceso en ejecucion: Ninguno
 
 Tiempo actual: 33
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      10     Ejecucion 0   0       33    33   
-P1     1      33     9      Listo     0   7       0     40   
+P1     1      32     67     Listo     0   8       0     40   
+P2     1      32     87     Listo     0   0       0     32   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      33     60     Listo     0   0       0     33   
-P3     2      33     16     Listo     0   0       0     33   
+P3     2      31     31     Bloqueado 2   3       1     37   
+P4     2      32     67     Listo     0   0       0     32   
 -------------------------------------------------------------------
-Proceso en ejecucion: P0
-
-Tiempo actual: 34
-
-Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
--------------------------------------------------------------------
---- Cola 1 ---
-P0     1      0      9      Ejecucion 0   0       34    34   
-P1     1      34     9      Listo     0   7       0     41   
--------------------------------------------------------------------
---- Cola 2 ---
-P2     2      34     60     Listo     0   0       0     34   
-P3     2      34     16     Listo     0   0       0     34   
--------------------------------------------------------------------
-Proceso en ejecucion: P0
-
-Tiempo actual: 35
-
-Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
--------------------------------------------------------------------
---- Cola 1 ---
-P0     1      0      8      Ejecucion 0   0       35    35   
-P1     1      35     9      Listo     0   7       0     42   
--------------------------------------------------------------------
---- Cola 2 ---
-P2     2      35     60     Listo     0   0       0     35   
-P3     2      35     16     Listo     0   0       0     35   
--------------------------------------------------------------------
-Proceso en ejecucion: P0
+Proceso en ejecucion: Ninguno
 
 Tiempo actual: 36
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      7      Ejecucion 0   0       36    36   
-P1     1      36     9      Listo     0   7       0     43   
+P1     1      32     66     Bloqueado 2   8       1     43   
+P2     1      33     87     Listo     0   0       0     33   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      36     60     Listo     0   0       0     36   
-P3     2      36     16     Listo     0   0       0     36   
+P3     2      31     31     Bloqueado 2   2       1     36   
+P4     2      33     67     Listo     0   0       0     33   
 -------------------------------------------------------------------
-Proceso en ejecucion: P0
-
-Tiempo actual: 37
-
-Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
--------------------------------------------------------------------
---- Cola 1 ---
-P0     1      0      6      Ejecucion 0   0       37    37   
-P1     1      37     9      Listo     0   7       0     44   
--------------------------------------------------------------------
---- Cola 2 ---
-P2     2      37     60     Listo     0   0       0     37   
-P3     2      37     16     Listo     0   0       0     37   
--------------------------------------------------------------------
-Proceso en ejecucion: P0
-
-Tiempo actual: 38
-
-Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
--------------------------------------------------------------------
---- Cola 1 ---
-P0     1      0      5      Ejecucion 0   0       38    38   
-P1     1      38     9      Listo     0   7       0     45   
--------------------------------------------------------------------
---- Cola 2 ---
-P2     2      38     60     Listo     0   0       0     38   
-P3     2      38     16     Listo     0   0       0     38   
--------------------------------------------------------------------
-Proceso en ejecucion: P0
+Proceso en ejecucion: Ninguno
 
 Tiempo actual: 39
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      4      Ejecucion 0   0       39    39   
-P1     1      39     9      Listo     0   7       0     46   
+P1     1      32     66     Bloqueado 2   7       1     42   
+P2     1      34     87     Listo     0   0       0     34   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      39     60     Listo     0   0       0     39   
-P3     2      39     16     Listo     0   0       0     39   
+P3     2      31     31     Bloqueado 2   1       1     35   
+P4     2      33     66     Ejecucion 0   0       1     34   
 -------------------------------------------------------------------
-Proceso en ejecucion: P0
-
-Tiempo actual: 40
-
-Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
--------------------------------------------------------------------
---- Cola 1 ---
-P0     1      0      3      Ejecucion 0   0       40    40   
-P1     1      40     9      Listo     0   7       0     47   
--------------------------------------------------------------------
---- Cola 2 ---
-P2     2      40     60     Listo     0   0       0     40   
-P3     2      40     16     Listo     0   0       0     40   
--------------------------------------------------------------------
-Proceso en ejecucion: P0
+Proceso en ejecucion: P4
 
 Tiempo actual: 41
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      2      Ejecucion 0   0       41    41   
-P1     1      41     9      Listo     0   7       0     48   
+P1     1      32     66     Bloqueado 2   6       1     41   
+P2     1      35     87     Listo     0   0       0     35   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      41     60     Listo     0   0       0     41   
-P3     2      41     16     Listo     0   0       0     41   
+P3     2      32     31     Listo     2   0       1     35   
+P4     2      33     65     Ejecucion 0   0       2     35   
 -------------------------------------------------------------------
-Proceso en ejecucion: P0
+Proceso en ejecucion: P4
 
 Tiempo actual: 42
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P0     1      0      1      Ejecucion 0   0       42    42   
-P1     1      42     9      Listo     0   7       0     49   
+P1     1      32     66     Bloqueado 2   5       1     40   
+P2     1      36     87     Listo     0   0       0     36   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      42     60     Listo     0   0       0     42   
-P3     2      42     16     Listo     0   0       0     42   
+P3     2      33     31     Listo     2   0       1     36   
+P4     2      33     64     Ejecucion 0   0       3     36   
 -------------------------------------------------------------------
-Proceso en ejecucion: P0
+Proceso en ejecucion: P4
 
 Tiempo actual: 43
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      43     9      Listo     0   7       0     50   
+P1     1      32     66     Bloqueado 2   4       1     39   
+P2     1      37     87     Listo     0   0       0     37   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     60     Listo     0   0       0     43   
-P3     2      43     16     Listo     0   0       0     43   
+P3     2      34     31     Listo     2   0       1     37   
+P4     2      33     63     Ejecucion 0   0       4     37   
 -------------------------------------------------------------------
-Proceso en ejecucion: Ninguno
+Proceso en ejecucion: P4
+
+Tiempo actual: 44
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      32     66     Bloqueado 2   3       1     38   
+P2     1      38     87     Listo     0   0       0     38   
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      35     31     Listo     2   0       1     38   
+P4     2      33     62     Ejecucion 0   0       5     38   
+-------------------------------------------------------------------
+Proceso en ejecucion: P4
 
 Tiempo actual: 45
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      44     9      Listo     0   7       0     51   
+P1     1      32     66     Bloqueado 2   2       1     37   
+P2     1      39     87     Listo     0   0       0     39   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     59     Ejecucion 0   0       1     44   
-P3     2      44     16     Listo     0   0       0     44   
+P3     2      36     31     Listo     2   0       1     39   
+P4     2      33     61     Ejecucion 0   0       6     39   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
+
+Tiempo actual: 46
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      32     66     Bloqueado 2   1       1     36   
+P2     1      40     87     Listo     0   0       0     40   
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      37     31     Listo     2   0       1     40   
+P4     2      33     60     Ejecucion 0   0       7     40   
+-------------------------------------------------------------------
+Proceso en ejecucion: P4
 
 Tiempo actual: 47
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      45     9      Listo     0   7       0     52   
+P1     1      33     66     Listo     2   0       1     36   
+P2     1      41     87     Listo     0   0       0     41   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     58     Ejecucion 0   0       2     45   
-P3     2      45     16     Listo     0   0       0     45   
+P3     2      38     31     Listo     2   0       1     41   
+P4     2      33     59     Ejecucion 0   0       8     41   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 48
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      46     9      Listo     0   7       0     53   
+P1     1      34     66     Listo     2   0       1     37   
+P2     1      42     87     Listo     0   0       0     42   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     57     Ejecucion 0   0       3     46   
-P3     2      46     16     Listo     0   0       0     46   
+P3     2      39     31     Listo     2   0       1     42   
+P4     2      33     58     Ejecucion 0   0       9     42   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 49
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      47     9      Listo     0   7       0     54   
+P1     1      35     66     Listo     2   0       1     38   
+P2     1      43     87     Listo     0   0       0     43   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     56     Ejecucion 0   0       4     47   
-P3     2      47     16     Listo     0   0       0     47   
+P3     2      40     31     Listo     2   0       1     43   
+P4     2      33     57     Ejecucion 0   0       10    43   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 50
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      48     9      Listo     0   7       0     55   
+P1     1      36     66     Listo     2   0       1     39   
+P2     1      44     87     Listo     0   0       0     44   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     55     Ejecucion 0   0       5     48   
-P3     2      48     16     Listo     0   0       0     48   
+P3     2      41     31     Listo     2   0       1     44   
+P4     2      33     56     Ejecucion 0   0       11    44   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 51
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      49     9      Listo     0   7       0     56   
+P1     1      37     66     Listo     2   0       1     40   
+P2     1      45     87     Listo     0   0       0     45   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     54     Ejecucion 0   0       6     49   
-P3     2      49     16     Listo     0   0       0     49   
+P3     2      42     31     Listo     2   0       1     45   
+P4     2      33     55     Ejecucion 0   0       12    45   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 52
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      50     9      Listo     0   7       0     57   
+P1     1      38     66     Listo     2   0       1     41   
+P2     1      46     87     Listo     0   0       0     46   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     53     Ejecucion 0   0       7     50   
-P3     2      50     16     Listo     0   0       0     50   
+P3     2      43     31     Listo     2   0       1     46   
+P4     2      33     54     Ejecucion 0   0       13    46   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 53
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      51     9      Listo     0   7       0     58   
+P1     1      39     66     Listo     2   0       1     42   
+P2     1      47     87     Listo     0   0       0     47   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     52     Ejecucion 0   0       8     51   
-P3     2      51     16     Listo     0   0       0     51   
+P3     2      44     31     Listo     2   0       1     47   
+P4     2      33     53     Ejecucion 0   0       14    47   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 54
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      52     9      Listo     0   7       0     59   
+P1     1      40     66     Listo     2   0       1     43   
+P2     1      48     87     Listo     0   0       0     48   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     51     Ejecucion 0   0       9     52   
-P3     2      52     16     Listo     0   0       0     52   
+P3     2      45     31     Listo     2   0       1     48   
+P4     2      33     52     Ejecucion 0   0       15    48   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 55
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      53     9      Listo     0   7       0     60   
+P1     1      41     66     Listo     2   0       1     44   
+P2     1      49     87     Listo     0   0       0     49   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     50     Ejecucion 0   0       10    53   
-P3     2      53     16     Listo     0   0       0     53   
+P3     2      46     31     Listo     2   0       1     49   
+P4     2      33     51     Ejecucion 0   0       16    49   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 56
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      54     9      Listo     0   7       0     61   
+P1     1      42     66     Listo     2   0       1     45   
+P2     1      50     87     Listo     0   0       0     50   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     49     Ejecucion 0   0       11    54   
-P3     2      54     16     Listo     0   0       0     54   
+P3     2      47     31     Listo     2   0       1     50   
+P4     2      33     50     Ejecucion 0   0       17    50   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 57
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      55     9      Listo     0   7       0     62   
+P1     1      43     66     Listo     2   0       1     46   
+P2     1      51     87     Listo     0   0       0     51   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     48     Ejecucion 0   0       12    55   
-P3     2      55     16     Listo     0   0       0     55   
+P3     2      48     31     Listo     2   0       1     51   
+P4     2      33     49     Ejecucion 0   0       18    51   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 58
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      56     9      Listo     0   7       0     63   
+P1     1      44     66     Listo     2   0       1     47   
+P2     1      52     87     Listo     0   0       0     52   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     47     Ejecucion 0   0       13    56   
-P3     2      56     16     Listo     0   0       0     56   
+P3     2      49     31     Listo     2   0       1     52   
+P4     2      33     48     Ejecucion 0   0       19    52   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 59
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      57     9      Listo     0   7       0     64   
+P1     1      45     66     Listo     2   0       1     48   
+P2     1      53     87     Listo     0   0       0     53   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     46     Ejecucion 0   0       14    57   
-P3     2      57     16     Listo     0   0       0     57   
+P3     2      50     31     Listo     2   0       1     53   
+P4     2      33     47     Ejecucion 0   0       20    53   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 60
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      58     9      Listo     0   7       0     65   
+P1     1      46     66     Listo     2   0       1     49   
+P2     1      54     87     Listo     0   0       0     54   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     45     Ejecucion 0   0       15    58   
-P3     2      58     16     Listo     0   0       0     58   
+P3     2      51     31     Listo     2   0       1     54   
+P4     2      33     46     Ejecucion 0   0       21    54   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 61
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      59     9      Listo     0   7       0     66   
+P1     1      47     66     Listo     2   0       1     50   
+P2     1      55     87     Listo     0   0       0     55   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     44     Ejecucion 0   0       16    59   
-P3     2      59     16     Listo     0   0       0     59   
+P3     2      52     31     Listo     2   0       1     55   
+P4     2      33     45     Ejecucion 0   0       22    55   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 62
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      60     9      Listo     0   7       0     67   
+P1     1      48     66     Listo     2   0       1     51   
+P2     1      56     87     Listo     0   0       0     56   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     43     Ejecucion 0   0       17    60   
-P3     2      60     16     Listo     0   0       0     60   
+P3     2      53     31     Listo     2   0       1     56   
+P4     2      33     44     Ejecucion 0   0       23    56   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 63
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      61     9      Listo     0   7       0     68   
+P1     1      49     66     Listo     2   0       1     52   
+P2     1      57     87     Listo     0   0       0     57   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     42     Ejecucion 0   0       18    61   
-P3     2      61     16     Listo     0   0       0     61   
+P3     2      54     31     Listo     2   0       1     57   
+P4     2      33     43     Ejecucion 0   0       24    57   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 64
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      62     9      Listo     0   7       0     69   
+P1     1      50     66     Listo     2   0       1     53   
+P2     1      58     87     Listo     0   0       0     58   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     41     Ejecucion 0   0       19    62   
-P3     2      62     16     Listo     0   0       0     62   
+P3     2      55     31     Listo     2   0       1     58   
+P4     2      33     42     Ejecucion 0   0       25    58   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 65
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      63     9      Listo     0   7       0     70   
+P1     1      51     66     Listo     2   0       1     54   
+P2     1      59     87     Listo     0   0       0     59   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     40     Ejecucion 0   0       20    63   
-P3     2      63     16     Listo     0   0       0     63   
+P3     2      56     31     Listo     2   0       1     59   
+P4     2      33     41     Ejecucion 0   0       26    59   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 66
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      64     9      Listo     0   7       0     71   
+P1     1      52     66     Listo     2   0       1     55   
+P2     1      60     87     Listo     0   0       0     60   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     39     Ejecucion 0   0       21    64   
-P3     2      64     16     Listo     0   0       0     64   
+P3     2      57     31     Listo     2   0       1     60   
+P4     2      33     40     Ejecucion 0   0       27    60   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 67
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      65     9      Listo     0   7       0     72   
+P1     1      53     66     Listo     2   0       1     56   
+P2     1      61     87     Listo     0   0       0     61   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     38     Ejecucion 0   0       22    65   
-P3     2      65     16     Listo     0   0       0     65   
+P3     2      58     31     Listo     2   0       1     61   
+P4     2      33     39     Ejecucion 0   0       28    61   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 68
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      66     9      Listo     0   7       0     73   
+P1     1      54     66     Listo     2   0       1     57   
+P2     1      62     87     Listo     0   0       0     62   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     37     Ejecucion 0   0       23    66   
-P3     2      66     16     Listo     0   0       0     66   
+P3     2      59     31     Listo     2   0       1     62   
+P4     2      33     38     Ejecucion 0   0       29    62   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 69
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      67     9      Listo     0   7       0     74   
+P1     1      55     66     Listo     2   0       1     58   
+P2     1      63     87     Listo     0   0       0     63   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     36     Ejecucion 0   0       24    67   
-P3     2      67     16     Listo     0   0       0     67   
+P3     2      60     31     Listo     2   0       1     63   
+P4     2      33     37     Ejecucion 0   0       30    63   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 70
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      68     9      Listo     0   7       0     75   
+P1     1      56     66     Listo     2   0       1     59   
+P2     1      64     87     Listo     0   0       0     64   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     35     Ejecucion 0   0       25    68   
-P3     2      68     16     Listo     0   0       0     68   
+P3     2      61     31     Listo     2   0       1     64   
+P4     2      33     36     Ejecucion 0   0       31    64   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 71
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      69     9      Listo     0   7       0     76   
+P1     1      57     66     Listo     2   0       1     60   
+P2     1      65     87     Listo     0   0       0     65   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     34     Ejecucion 0   0       26    69   
-P3     2      69     16     Listo     0   0       0     69   
+P3     2      62     31     Listo     2   0       1     65   
+P4     2      33     35     Ejecucion 0   0       32    65   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 72
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      70     9      Listo     0   7       0     77   
+P1     1      58     66     Listo     2   0       1     61   
+P2     1      66     87     Listo     0   0       0     66   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     33     Ejecucion 0   0       27    70   
-P3     2      70     16     Listo     0   0       0     70   
+P3     2      63     31     Listo     2   0       1     66   
+P4     2      33     34     Ejecucion 0   0       33    66   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 73
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      71     9      Listo     0   7       0     78   
+P1     1      59     66     Listo     2   0       1     62   
+P2     1      67     87     Listo     0   0       0     67   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     32     Ejecucion 0   0       28    71   
-P3     2      71     16     Listo     0   0       0     71   
+P3     2      64     31     Listo     2   0       1     67   
+P4     2      33     33     Ejecucion 0   0       34    67   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 74
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      72     9      Listo     0   7       0     79   
+P1     1      60     66     Listo     2   0       1     63   
+P2     1      68     87     Listo     0   0       0     68   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     31     Ejecucion 0   0       29    72   
-P3     2      72     16     Listo     0   0       0     72   
+P3     2      65     31     Listo     2   0       1     68   
+P4     2      33     32     Ejecucion 0   0       35    68   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 75
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      73     9      Listo     0   7       0     80   
+P1     1      61     66     Listo     2   0       1     64   
+P2     1      69     87     Listo     0   0       0     69   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     30     Ejecucion 0   0       30    73   
-P3     2      73     16     Listo     0   0       0     73   
+P3     2      66     31     Listo     2   0       1     69   
+P4     2      33     31     Ejecucion 0   0       36    69   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 76
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      74     9      Listo     0   7       0     81   
+P1     1      62     66     Listo     2   0       1     65   
+P2     1      70     87     Listo     0   0       0     70   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     29     Ejecucion 0   0       31    74   
-P3     2      74     16     Listo     0   0       0     74   
+P3     2      67     31     Listo     2   0       1     70   
+P4     2      33     30     Ejecucion 0   0       37    70   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 77
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      75     9      Listo     0   7       0     82   
+P1     1      63     66     Listo     2   0       1     66   
+P2     1      71     87     Listo     0   0       0     71   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     28     Ejecucion 0   0       32    75   
-P3     2      75     16     Listo     0   0       0     75   
+P3     2      68     31     Listo     2   0       1     71   
+P4     2      33     29     Ejecucion 0   0       38    71   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 78
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      76     9      Listo     0   7       0     83   
+P1     1      64     66     Listo     2   0       1     67   
+P2     1      72     87     Listo     0   0       0     72   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     27     Ejecucion 0   0       33    76   
-P3     2      76     16     Listo     0   0       0     76   
+P3     2      69     31     Listo     2   0       1     72   
+P4     2      33     28     Ejecucion 0   0       39    72   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 79
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      77     9      Listo     0   7       0     84   
+P1     1      65     66     Listo     2   0       1     68   
+P2     1      73     87     Listo     0   0       0     73   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     26     Ejecucion 0   0       34    77   
-P3     2      77     16     Listo     0   0       0     77   
+P3     2      70     31     Listo     2   0       1     73   
+P4     2      33     27     Ejecucion 0   0       40    73   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 80
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      78     9      Listo     0   7       0     85   
+P1     1      66     66     Listo     2   0       1     69   
+P2     1      74     87     Listo     0   0       0     74   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     25     Ejecucion 0   0       35    78   
-P3     2      78     16     Listo     0   0       0     78   
+P3     2      71     31     Listo     2   0       1     74   
+P4     2      33     26     Ejecucion 0   0       41    74   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 81
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      79     9      Listo     0   7       0     86   
+P1     1      67     66     Listo     2   0       1     70   
+P2     1      75     87     Listo     0   0       0     75   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     24     Ejecucion 0   0       36    79   
-P3     2      79     16     Listo     0   0       0     79   
+P3     2      72     31     Listo     2   0       1     75   
+P4     2      33     25     Ejecucion 0   0       42    75   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 82
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      80     9      Listo     0   7       0     87   
+P1     1      68     66     Listo     2   0       1     71   
+P2     1      76     87     Listo     0   0       0     76   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     23     Ejecucion 0   0       37    80   
-P3     2      80     16     Listo     0   0       0     80   
+P3     2      73     31     Listo     2   0       1     76   
+P4     2      33     24     Ejecucion 0   0       43    76   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 83
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      81     9      Listo     0   7       0     88   
+P1     1      69     66     Listo     2   0       1     72   
+P2     1      77     87     Listo     0   0       0     77   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     22     Ejecucion 0   0       38    81   
-P3     2      81     16     Listo     0   0       0     81   
+P3     2      74     31     Listo     2   0       1     77   
+P4     2      33     23     Ejecucion 0   0       44    77   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 84
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      82     9      Listo     0   7       0     89   
+P1     1      70     66     Listo     2   0       1     73   
+P2     1      78     87     Listo     0   0       0     78   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     21     Ejecucion 0   0       39    82   
-P3     2      82     16     Listo     0   0       0     82   
+P3     2      75     31     Listo     2   0       1     78   
+P4     2      33     22     Ejecucion 0   0       45    78   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 85
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      83     9      Listo     0   7       0     90   
+P1     1      71     66     Listo     2   0       1     74   
+P2     1      79     87     Listo     0   0       0     79   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     20     Ejecucion 0   0       40    83   
-P3     2      83     16     Listo     0   0       0     83   
+P3     2      76     31     Listo     2   0       1     79   
+P4     2      33     21     Ejecucion 0   0       46    79   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 86
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      84     9      Listo     0   7       0     91   
+P1     1      72     66     Listo     2   0       1     75   
+P2     1      80     87     Listo     0   0       0     80   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     19     Ejecucion 0   0       41    84   
-P3     2      84     16     Listo     0   0       0     84   
+P3     2      77     31     Listo     2   0       1     80   
+P4     2      33     20     Ejecucion 0   0       47    80   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 87
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      85     9      Listo     0   7       0     92   
+P1     1      73     66     Listo     2   0       1     76   
+P2     1      81     87     Listo     0   0       0     81   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     18     Ejecucion 0   0       42    85   
-P3     2      85     16     Listo     0   0       0     85   
+P3     2      78     31     Listo     2   0       1     81   
+P4     2      33     19     Ejecucion 0   0       48    81   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 88
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      86     9      Listo     0   7       0     93   
+P1     1      74     66     Listo     2   0       1     77   
+P2     1      82     87     Listo     0   0       0     82   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     17     Ejecucion 0   0       43    86   
-P3     2      86     16     Listo     0   0       0     86   
+P3     2      79     31     Listo     2   0       1     82   
+P4     2      33     18     Ejecucion 0   0       49    82   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 89
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      87     9      Listo     0   7       0     94   
+P1     1      75     66     Listo     2   0       1     78   
+P2     1      83     87     Listo     0   0       0     83   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     16     Ejecucion 0   0       44    87   
-P3     2      87     16     Listo     0   0       0     87   
+P3     2      80     31     Listo     2   0       1     83   
+P4     2      33     17     Ejecucion 0   0       50    83   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 90
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      88     9      Listo     0   7       0     95   
+P1     1      76     66     Listo     2   0       1     79   
+P2     1      84     87     Listo     0   0       0     84   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     15     Ejecucion 0   0       45    88   
-P3     2      88     16     Listo     0   0       0     88   
+P3     2      81     31     Listo     2   0       1     84   
+P4     2      33     16     Ejecucion 0   0       51    84   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 91
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      89     9      Listo     0   7       0     96   
+P1     1      77     66     Listo     2   0       1     80   
+P2     1      85     87     Listo     0   0       0     85   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     14     Ejecucion 0   0       46    89   
-P3     2      89     16     Listo     0   0       0     89   
+P3     2      82     31     Listo     2   0       1     85   
+P4     2      33     15     Ejecucion 0   0       52    85   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 92
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      90     9      Listo     0   7       0     97   
+P1     1      78     66     Listo     2   0       1     81   
+P2     1      86     87     Listo     0   0       0     86   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     13     Ejecucion 0   0       47    90   
-P3     2      90     16     Listo     0   0       0     90   
+P3     2      83     31     Listo     2   0       1     86   
+P4     2      33     14     Ejecucion 0   0       53    86   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 93
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      91     9      Listo     0   7       0     98   
+P1     1      79     66     Listo     2   0       1     82   
+P2     1      87     87     Listo     0   0       0     87   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     12     Ejecucion 0   0       48    91   
-P3     2      91     16     Listo     0   0       0     91   
+P3     2      84     31     Listo     2   0       1     87   
+P4     2      33     13     Ejecucion 0   0       54    87   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 94
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      92     9      Listo     0   7       0     99   
+P1     1      80     66     Listo     2   0       1     83   
+P2     1      88     87     Listo     0   0       0     88   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     11     Ejecucion 0   0       49    92   
-P3     2      92     16     Listo     0   0       0     92   
+P3     2      85     31     Listo     2   0       1     88   
+P4     2      33     12     Ejecucion 0   0       55    88   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 95
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      93     9      Listo     0   7       0     100  
+P1     1      81     66     Listo     2   0       1     84   
+P2     1      89     87     Listo     0   0       0     89   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     10     Ejecucion 0   0       50    93   
-P3     2      93     16     Listo     0   0       0     93   
+P3     2      86     31     Listo     2   0       1     89   
+P4     2      33     11     Ejecucion 0   0       56    89   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 96
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      94     9      Listo     0   7       0     101  
+P1     1      82     66     Listo     2   0       1     85   
+P2     1      90     87     Listo     0   0       0     90   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     9      Ejecucion 0   0       51    94   
-P3     2      94     16     Listo     0   0       0     94   
+P3     2      87     31     Listo     2   0       1     90   
+P4     2      33     10     Ejecucion 0   0       57    90   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 97
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      95     9      Listo     0   7       0     102  
+P1     1      83     66     Listo     2   0       1     86   
+P2     1      91     87     Listo     0   0       0     91   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     8      Ejecucion 0   0       52    95   
-P3     2      95     16     Listo     0   0       0     95   
+P3     2      88     31     Listo     2   0       1     91   
+P4     2      33     9      Ejecucion 0   0       58    91   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 98
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      96     9      Listo     0   7       0     103  
+P1     1      84     66     Listo     2   0       1     87   
+P2     1      92     87     Listo     0   0       0     92   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     7      Ejecucion 0   0       53    96   
-P3     2      96     16     Listo     0   0       0     96   
+P3     2      89     31     Listo     2   0       1     92   
+P4     2      33     8      Ejecucion 0   0       59    92   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 99
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      97     9      Listo     0   7       0     104  
+P1     1      85     66     Listo     2   0       1     88   
+P2     1      93     87     Listo     0   0       0     93   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     6      Ejecucion 0   0       54    97   
-P3     2      97     16     Listo     0   0       0     97   
+P3     2      90     31     Listo     2   0       1     93   
+P4     2      33     7      Ejecucion 0   0       60    93   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 100
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      98     9      Listo     0   7       0     105  
+P1     1      86     66     Listo     2   0       1     89   
+P2     1      94     87     Listo     0   0       0     94   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     5      Ejecucion 0   0       55    98   
-P3     2      98     16     Listo     0   0       0     98   
+P3     2      91     31     Listo     2   0       1     94   
+P4     2      33     6      Ejecucion 0   0       61    94   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 101
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      99     9      Listo     0   7       0     106  
+P1     1      87     66     Listo     2   0       1     90   
+P2     1      95     87     Listo     0   0       0     95   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     4      Ejecucion 0   0       56    99   
-P3     2      99     16     Listo     0   0       0     99   
+P3     2      92     31     Listo     2   0       1     95   
+P4     2      33     5      Ejecucion 0   0       62    95   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 102
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      100    9      Listo     0   7       0     107  
+P1     1      88     66     Listo     2   0       1     91   
+P2     1      96     87     Listo     0   0       0     96   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     3      Ejecucion 0   0       57    100  
-P3     2      100    16     Listo     0   0       0     100  
+P3     2      93     31     Listo     2   0       1     96   
+P4     2      33     4      Ejecucion 0   0       63    96   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 103
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      101    9      Listo     0   7       0     108  
+P1     1      89     66     Listo     2   0       1     92   
+P2     1      97     87     Listo     0   0       0     97   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     2      Ejecucion 0   0       58    101  
-P3     2      101    16     Listo     0   0       0     101  
+P3     2      94     31     Listo     2   0       1     97   
+P4     2      33     3      Ejecucion 0   0       64    97   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 104
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      102    9      Listo     0   7       0     109  
+P1     1      90     66     Listo     2   0       1     93   
+P2     1      98     87     Listo     0   0       0     98   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P2     2      43     1      Ejecucion 0   0       59    102  
-P3     2      102    16     Listo     0   0       0     102  
+P3     2      95     31     Listo     2   0       1     98   
+P4     2      33     2      Ejecucion 0   0       65    98   
 -------------------------------------------------------------------
-Proceso en ejecucion: P2
+Proceso en ejecucion: P4
 
 Tiempo actual: 105
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      103    9      Listo     0   7       0     110  
+P1     1      91     66     Listo     2   0       1     94   
+P2     1      99     87     Listo     0   0       0     99   
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      103    16     Listo     0   0       0     103  
+P3     2      96     31     Listo     2   0       1     99   
+P4     2      33     1      Ejecucion 0   0       66    99   
 -------------------------------------------------------------------
-Proceso en ejecucion: Ninguno
+Proceso en ejecucion: P4
 
-Tiempo actual: 107
+Tiempo actual: 106
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      103    8      Bloqueado 2   7       1     113  
+P1     1      92     66     Listo     2   0       1     95   
+P2     1      100    87     Listo     0   0       0     100  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    16     Listo     0   0       0     104  
+P3     2      97     31     Listo     2   0       1     100  
 -------------------------------------------------------------------
 Proceso en ejecucion: Ninguno
+
+Tiempo actual: 108
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      93     66     Listo     2   0       1     96   
+P2     1      100    86     Ejecucion 0   0       1     101  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      98     31     Listo     2   0       1     101  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
 
 Tiempo actual: 110
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      103    8      Bloqueado 2   6       1     112  
+P1     1      94     66     Listo     2   0       1     97   
+P2     1      100    85     Ejecucion 0   0       2     102  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    15     Ejecucion 0   0       1     105  
+P3     2      99     31     Listo     2   0       1     102  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
+
+Tiempo actual: 111
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      95     66     Listo     2   0       1     98   
+P2     1      100    84     Ejecucion 0   0       3     103  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      100    31     Listo     2   0       1     103  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
 
 Tiempo actual: 112
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      103    8      Bloqueado 2   5       1     111  
+P1     1      96     66     Listo     2   0       1     99   
+P2     1      100    83     Ejecucion 0   0       4     104  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    14     Ejecucion 0   0       2     106  
+P3     2      101    31     Listo     2   0       1     104  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 113
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      103    8      Bloqueado 2   4       1     110  
+P1     1      97     66     Listo     2   0       1     100  
+P2     1      100    82     Ejecucion 0   0       5     105  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    13     Ejecucion 0   0       3     107  
+P3     2      102    31     Listo     2   0       1     105  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 114
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      103    8      Bloqueado 2   3       1     109  
+P1     1      98     66     Listo     2   0       1     101  
+P2     1      100    81     Ejecucion 0   0       6     106  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    12     Ejecucion 0   0       4     108  
+P3     2      103    31     Listo     2   0       1     106  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 115
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      103    8      Bloqueado 2   2       1     108  
+P1     1      99     66     Listo     2   0       1     102  
+P2     1      100    80     Ejecucion 0   0       7     107  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    11     Ejecucion 0   0       5     109  
+P3     2      104    31     Listo     2   0       1     107  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 116
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      103    8      Bloqueado 2   1       1     107  
+P1     1      100    66     Listo     2   0       1     103  
+P2     1      100    79     Ejecucion 0   0       8     108  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    10     Ejecucion 0   0       6     110  
+P3     2      105    31     Listo     2   0       1     108  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 117
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      104    8      Listo     2   0       1     107  
+P1     1      101    66     Listo     2   0       1     104  
+P2     1      100    78     Ejecucion 0   0       9     109  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    9      Ejecucion 0   0       7     111  
+P3     2      106    31     Listo     2   0       1     109  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 118
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      105    8      Listo     2   0       1     108  
+P1     1      102    66     Listo     2   0       1     105  
+P2     1      100    77     Ejecucion 0   0       10    110  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    8      Ejecucion 0   0       8     112  
+P3     2      107    31     Listo     2   0       1     110  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 119
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      106    8      Listo     2   0       1     109  
+P1     1      103    66     Listo     2   0       1     106  
+P2     1      100    76     Ejecucion 0   0       11    111  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    7      Ejecucion 0   0       9     113  
+P3     2      108    31     Listo     2   0       1     111  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 120
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      107    8      Listo     2   0       1     110  
+P1     1      104    66     Listo     2   0       1     107  
+P2     1      100    75     Ejecucion 0   0       12    112  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    6      Ejecucion 0   0       10    114  
+P3     2      109    31     Listo     2   0       1     112  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 121
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      108    8      Listo     2   0       1     111  
+P1     1      105    66     Listo     2   0       1     108  
+P2     1      100    74     Ejecucion 0   0       13    113  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    5      Ejecucion 0   0       11    115  
+P3     2      110    31     Listo     2   0       1     113  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 122
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      109    8      Listo     2   0       1     112  
+P1     1      106    66     Listo     2   0       1     109  
+P2     1      100    73     Ejecucion 0   0       14    114  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    4      Ejecucion 0   0       12    116  
+P3     2      111    31     Listo     2   0       1     114  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 123
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      110    8      Listo     2   0       1     113  
+P1     1      107    66     Listo     2   0       1     110  
+P2     1      100    72     Ejecucion 0   0       15    115  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    3      Ejecucion 0   0       13    117  
+P3     2      112    31     Listo     2   0       1     115  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 124
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      111    8      Listo     2   0       1     114  
+P1     1      108    66     Listo     2   0       1     111  
+P2     1      100    71     Ejecucion 0   0       16    116  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    2      Ejecucion 0   0       14    118  
+P3     2      113    31     Listo     2   0       1     116  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 125
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      112    8      Listo     2   0       1     115  
+P1     1      109    66     Listo     2   0       1     112  
+P2     1      100    70     Ejecucion 0   0       17    117  
 -------------------------------------------------------------------
 --- Cola 2 ---
-P3     2      104    1      Ejecucion 0   0       15    119  
+P3     2      114    31     Listo     2   0       1     117  
 -------------------------------------------------------------------
-Proceso en ejecucion: P3
+Proceso en ejecucion: P2
 
 Tiempo actual: 126
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      113    8      Listo     2   0       1     116  
+P1     1      110    66     Listo     2   0       1     113  
+P2     1      100    69     Ejecucion 0   0       18    118  
 -------------------------------------------------------------------
 --- Cola 2 ---
+P3     2      115    31     Listo     2   0       1     118  
 -------------------------------------------------------------------
-Proceso en ejecucion: Ninguno
+Proceso en ejecucion: P2
+
+Tiempo actual: 127
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      111    66     Listo     2   0       1     114  
+P2     1      100    68     Ejecucion 0   0       19    119  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      116    31     Listo     2   0       1     119  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
 
 Tiempo actual: 128
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      113    7      Ejecucion 2   0       2     117  
+P1     1      112    66     Listo     2   0       1     115  
+P2     1      100    67     Ejecucion 0   0       20    120  
 -------------------------------------------------------------------
 --- Cola 2 ---
+P3     2      117    31     Listo     2   0       1     120  
 -------------------------------------------------------------------
-Proceso en ejecucion: P1
+Proceso en ejecucion: P2
+
+Tiempo actual: 129
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      113    66     Listo     2   0       1     116  
+P2     1      100    66     Ejecucion 0   0       21    121  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      118    31     Listo     2   0       1     121  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
 
 Tiempo actual: 130
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      113    6      Ejecucion 2   0       3     118  
+P1     1      114    66     Listo     2   0       1     117  
+P2     1      100    65     Ejecucion 0   0       22    122  
 -------------------------------------------------------------------
 --- Cola 2 ---
+P3     2      119    31     Listo     2   0       1     122  
 -------------------------------------------------------------------
-Proceso en ejecucion: P1
+Proceso en ejecucion: P2
 
 Tiempo actual: 131
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      113    5      Ejecucion 2   0       4     119  
+P1     1      115    66     Listo     2   0       1     118  
+P2     1      100    64     Ejecucion 0   0       23    123  
 -------------------------------------------------------------------
 --- Cola 2 ---
+P3     2      120    31     Listo     2   0       1     123  
 -------------------------------------------------------------------
-Proceso en ejecucion: P1
+Proceso en ejecucion: P2
 
 Tiempo actual: 132
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      113    4      Ejecucion 2   0       5     120  
+P1     1      116    66     Listo     2   0       1     119  
+P2     1      100    63     Ejecucion 0   0       24    124  
 -------------------------------------------------------------------
 --- Cola 2 ---
+P3     2      121    31     Listo     2   0       1     124  
 -------------------------------------------------------------------
-Proceso en ejecucion: P1
+Proceso en ejecucion: P2
 
 Tiempo actual: 133
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      113    3      Ejecucion 2   0       6     121  
+P1     1      117    66     Listo     2   0       1     120  
+P2     1      100    62     Ejecucion 0   0       25    125  
 -------------------------------------------------------------------
 --- Cola 2 ---
+P3     2      122    31     Listo     2   0       1     125  
 -------------------------------------------------------------------
-Proceso en ejecucion: P1
+Proceso en ejecucion: P2
 
 Tiempo actual: 134
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      113    2      Ejecucion 2   0       7     122  
+P1     1      118    66     Listo     2   0       1     121  
+P2     1      100    61     Ejecucion 0   0       26    126  
 -------------------------------------------------------------------
 --- Cola 2 ---
+P3     2      123    31     Listo     2   0       1     126  
 -------------------------------------------------------------------
-Proceso en ejecucion: P1
+Proceso en ejecucion: P2
 
 Tiempo actual: 135
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
 --- Cola 1 ---
-P1     1      113    1      Ejecucion 2   0       8     123  
+P1     1      119    66     Listo     2   0       1     122  
+P2     1      100    60     Ejecucion 0   0       27    127  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      124    31     Listo     2   0       1     127  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 136
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      120    66     Listo     2   0       1     123  
+P2     1      100    59     Ejecucion 0   0       28    128  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      125    31     Listo     2   0       1     128  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 137
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      121    66     Listo     2   0       1     124  
+P2     1      100    58     Ejecucion 0   0       29    129  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      126    31     Listo     2   0       1     129  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 138
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      122    66     Listo     2   0       1     125  
+P2     1      100    57     Ejecucion 0   0       30    130  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      127    31     Listo     2   0       1     130  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 139
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      123    66     Listo     2   0       1     126  
+P2     1      100    56     Ejecucion 0   0       31    131  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      128    31     Listo     2   0       1     131  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 140
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      124    66     Listo     2   0       1     127  
+P2     1      100    55     Ejecucion 0   0       32    132  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      129    31     Listo     2   0       1     132  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 141
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      125    66     Listo     2   0       1     128  
+P2     1      100    54     Ejecucion 0   0       33    133  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      130    31     Listo     2   0       1     133  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 142
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      126    66     Listo     2   0       1     129  
+P2     1      100    53     Ejecucion 0   0       34    134  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      131    31     Listo     2   0       1     134  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 143
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      127    66     Listo     2   0       1     130  
+P2     1      100    52     Ejecucion 0   0       35    135  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      132    31     Listo     2   0       1     135  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 144
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      128    66     Listo     2   0       1     131  
+P2     1      100    51     Ejecucion 0   0       36    136  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      133    31     Listo     2   0       1     136  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 145
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      129    66     Listo     2   0       1     132  
+P2     1      100    50     Ejecucion 0   0       37    137  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      134    31     Listo     2   0       1     137  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 146
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      130    66     Listo     2   0       1     133  
+P2     1      100    49     Ejecucion 0   0       38    138  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      135    31     Listo     2   0       1     138  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 147
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      131    66     Listo     2   0       1     134  
+P2     1      100    48     Ejecucion 0   0       39    139  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      136    31     Listo     2   0       1     139  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 148
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      132    66     Listo     2   0       1     135  
+P2     1      100    47     Ejecucion 0   0       40    140  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      137    31     Listo     2   0       1     140  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 149
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      133    66     Listo     2   0       1     136  
+P2     1      100    46     Ejecucion 0   0       41    141  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      138    31     Listo     2   0       1     141  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 150
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      134    66     Listo     2   0       1     137  
+P2     1      100    45     Ejecucion 0   0       42    142  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      139    31     Listo     2   0       1     142  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 151
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      135    66     Listo     2   0       1     138  
+P2     1      100    44     Ejecucion 0   0       43    143  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      140    31     Listo     2   0       1     143  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 152
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      136    66     Listo     2   0       1     139  
+P2     1      100    43     Ejecucion 0   0       44    144  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      141    31     Listo     2   0       1     144  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 153
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      137    66     Listo     2   0       1     140  
+P2     1      100    42     Ejecucion 0   0       45    145  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      142    31     Listo     2   0       1     145  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 154
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      138    66     Listo     2   0       1     141  
+P2     1      100    41     Ejecucion 0   0       46    146  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      143    31     Listo     2   0       1     146  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 155
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      139    66     Listo     2   0       1     142  
+P2     1      100    40     Ejecucion 0   0       47    147  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      144    31     Listo     2   0       1     147  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 156
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      140    66     Listo     2   0       1     143  
+P2     1      100    39     Ejecucion 0   0       48    148  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      145    31     Listo     2   0       1     148  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 157
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      141    66     Listo     2   0       1     144  
+P2     1      100    38     Ejecucion 0   0       49    149  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      146    31     Listo     2   0       1     149  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 158
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      142    66     Listo     2   0       1     145  
+P2     1      100    37     Ejecucion 0   0       50    150  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      147    31     Listo     2   0       1     150  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 159
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      143    66     Listo     2   0       1     146  
+P2     1      100    36     Ejecucion 0   0       51    151  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      148    31     Listo     2   0       1     151  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 160
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      144    66     Listo     2   0       1     147  
+P2     1      100    35     Ejecucion 0   0       52    152  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      149    31     Listo     2   0       1     152  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 161
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      145    66     Listo     2   0       1     148  
+P2     1      100    34     Ejecucion 0   0       53    153  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      150    31     Listo     2   0       1     153  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 162
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      146    66     Listo     2   0       1     149  
+P2     1      100    33     Ejecucion 0   0       54    154  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      151    31     Listo     2   0       1     154  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 163
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      147    66     Listo     2   0       1     150  
+P2     1      100    32     Ejecucion 0   0       55    155  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      152    31     Listo     2   0       1     155  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 164
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      148    66     Listo     2   0       1     151  
+P2     1      100    31     Ejecucion 0   0       56    156  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      153    31     Listo     2   0       1     156  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 165
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      149    66     Listo     2   0       1     152  
+P2     1      100    30     Ejecucion 0   0       57    157  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      154    31     Listo     2   0       1     157  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 166
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      150    66     Listo     2   0       1     153  
+P2     1      100    29     Ejecucion 0   0       58    158  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      155    31     Listo     2   0       1     158  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 167
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      151    66     Listo     2   0       1     154  
+P2     1      100    28     Ejecucion 0   0       59    159  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      156    31     Listo     2   0       1     159  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 168
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      152    66     Listo     2   0       1     155  
+P2     1      100    27     Ejecucion 0   0       60    160  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      157    31     Listo     2   0       1     160  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 169
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      153    66     Listo     2   0       1     156  
+P2     1      100    26     Ejecucion 0   0       61    161  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      158    31     Listo     2   0       1     161  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 170
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      154    66     Listo     2   0       1     157  
+P2     1      100    25     Ejecucion 0   0       62    162  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      159    31     Listo     2   0       1     162  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 171
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      155    66     Listo     2   0       1     158  
+P2     1      100    24     Ejecucion 0   0       63    163  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      160    31     Listo     2   0       1     163  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 172
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      156    66     Listo     2   0       1     159  
+P2     1      100    23     Ejecucion 0   0       64    164  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      161    31     Listo     2   0       1     164  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 173
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      157    66     Listo     2   0       1     160  
+P2     1      100    22     Ejecucion 0   0       65    165  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      162    31     Listo     2   0       1     165  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 174
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      158    66     Listo     2   0       1     161  
+P2     1      100    21     Ejecucion 0   0       66    166  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      163    31     Listo     2   0       1     166  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 175
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      159    66     Listo     2   0       1     162  
+P2     1      100    20     Ejecucion 0   0       67    167  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      164    31     Listo     2   0       1     167  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 176
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      160    66     Listo     2   0       1     163  
+P2     1      100    19     Ejecucion 0   0       68    168  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      165    31     Listo     2   0       1     168  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 177
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      161    66     Listo     2   0       1     164  
+P2     1      100    18     Ejecucion 0   0       69    169  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      166    31     Listo     2   0       1     169  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 178
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      162    66     Listo     2   0       1     165  
+P2     1      100    17     Ejecucion 0   0       70    170  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      167    31     Listo     2   0       1     170  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 179
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      163    66     Listo     2   0       1     166  
+P2     1      100    16     Ejecucion 0   0       71    171  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      168    31     Listo     2   0       1     171  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 180
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      164    66     Listo     2   0       1     167  
+P2     1      100    15     Ejecucion 0   0       72    172  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      169    31     Listo     2   0       1     172  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 181
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      165    66     Listo     2   0       1     168  
+P2     1      100    14     Ejecucion 0   0       73    173  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      170    31     Listo     2   0       1     173  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 182
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      166    66     Listo     2   0       1     169  
+P2     1      100    13     Ejecucion 0   0       74    174  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      171    31     Listo     2   0       1     174  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 183
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      167    66     Listo     2   0       1     170  
+P2     1      100    12     Ejecucion 0   0       75    175  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      172    31     Listo     2   0       1     175  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 184
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      168    66     Listo     2   0       1     171  
+P2     1      100    11     Ejecucion 0   0       76    176  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      173    31     Listo     2   0       1     176  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 185
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      169    66     Listo     2   0       1     172  
+P2     1      100    10     Ejecucion 0   0       77    177  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      174    31     Listo     2   0       1     177  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 186
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      170    66     Listo     2   0       1     173  
+P2     1      100    9      Ejecucion 0   0       78    178  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      175    31     Listo     2   0       1     178  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 187
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      171    66     Listo     2   0       1     174  
+P2     1      100    8      Ejecucion 0   0       79    179  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      176    31     Listo     2   0       1     179  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 188
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      172    66     Listo     2   0       1     175  
+P2     1      100    7      Ejecucion 0   0       80    180  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      177    31     Listo     2   0       1     180  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 189
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      173    66     Listo     2   0       1     176  
+P2     1      100    6      Ejecucion 0   0       81    181  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      178    31     Listo     2   0       1     181  
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 190
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      174    66     Listo     2   0       1     177  
+P2     1      101    5      Listo     2   0       82    185  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    31     Listo     2   0       1     182  
+-------------------------------------------------------------------
+Proceso en ejecucion: Ninguno
+
+Tiempo actual: 192
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      175    66     Listo     2   0       1     178  
+P2     1      102    5      Listo     2   0       82    186  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    30     Ejecucion 2   0       2     183  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 194
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      176    66     Listo     2   0       1     179  
+P2     1      103    5      Listo     2   0       82    187  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    29     Ejecucion 2   0       3     184  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 195
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      177    66     Listo     2   0       1     180  
+P2     1      104    5      Listo     2   0       82    188  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    28     Ejecucion 2   0       4     185  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 196
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      178    66     Listo     2   0       1     181  
+P2     1      105    5      Listo     2   0       82    189  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    27     Ejecucion 2   0       5     186  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 197
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      179    66     Listo     2   0       1     182  
+P2     1      106    5      Listo     2   0       82    190  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    26     Ejecucion 2   0       6     187  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 198
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      180    66     Listo     2   0       1     183  
+P2     1      107    5      Listo     2   0       82    191  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    25     Ejecucion 2   0       7     188  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 199
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      181    66     Listo     2   0       1     184  
+P2     1      108    5      Listo     2   0       82    192  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    24     Ejecucion 2   0       8     189  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 200
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      182    66     Listo     2   0       1     185  
+P2     1      109    5      Listo     2   0       82    193  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    23     Ejecucion 2   0       9     190  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 201
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      183    66     Listo     2   0       1     186  
+P2     1      110    5      Listo     2   0       82    194  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    22     Ejecucion 2   0       10    191  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 202
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      184    66     Listo     2   0       1     187  
+P2     1      111    5      Listo     2   0       82    195  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    21     Ejecucion 2   0       11    192  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 203
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      185    66     Listo     2   0       1     188  
+P2     1      112    5      Listo     2   0       82    196  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    20     Ejecucion 2   0       12    193  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 204
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      186    66     Listo     2   0       1     189  
+P2     1      113    5      Listo     2   0       82    197  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    19     Ejecucion 2   0       13    194  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 205
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      187    66     Listo     2   0       1     190  
+P2     1      114    5      Listo     2   0       82    198  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    18     Ejecucion 2   0       14    195  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 206
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      188    66     Listo     2   0       1     191  
+P2     1      115    5      Listo     2   0       82    199  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    17     Ejecucion 2   0       15    196  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 207
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      189    66     Listo     2   0       1     192  
+P2     1      116    5      Listo     2   0       82    200  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    16     Ejecucion 2   0       16    197  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 208
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      190    66     Listo     2   0       1     193  
+P2     1      117    5      Listo     2   0       82    201  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    15     Ejecucion 2   0       17    198  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 209
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      191    66     Listo     2   0       1     194  
+P2     1      118    5      Listo     2   0       82    202  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    14     Ejecucion 2   0       18    199  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 210
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      192    66     Listo     2   0       1     195  
+P2     1      119    5      Listo     2   0       82    203  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    13     Ejecucion 2   0       19    200  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 211
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      193    66     Listo     2   0       1     196  
+P2     1      120    5      Listo     2   0       82    204  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    12     Ejecucion 2   0       20    201  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 212
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      194    66     Listo     2   0       1     197  
+P2     1      121    5      Listo     2   0       82    205  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    11     Ejecucion 2   0       21    202  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 213
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      195    66     Listo     2   0       1     198  
+P2     1      122    5      Listo     2   0       82    206  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    10     Ejecucion 2   0       22    203  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 214
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      196    66     Listo     2   0       1     199  
+P2     1      123    5      Listo     2   0       82    207  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    9      Ejecucion 2   0       23    204  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 215
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      197    66     Listo     2   0       1     200  
+P2     1      124    5      Listo     2   0       82    208  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    8      Ejecucion 2   0       24    205  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 216
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      198    66     Listo     2   0       1     201  
+P2     1      125    5      Listo     2   0       82    209  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    7      Ejecucion 2   0       25    206  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 217
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      199    66     Listo     2   0       1     202  
+P2     1      126    5      Listo     2   0       82    210  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    6      Ejecucion 2   0       26    207  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 218
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      200    66     Listo     2   0       1     203  
+P2     1      127    5      Listo     2   0       82    211  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    5      Ejecucion 2   0       27    208  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 219
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      201    66     Listo     2   0       1     204  
+P2     1      128    5      Listo     2   0       82    212  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    4      Ejecucion 2   0       28    209  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 220
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      202    66     Listo     2   0       1     205  
+P2     1      129    5      Listo     2   0       82    213  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    3      Ejecucion 2   0       29    210  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 221
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      203    66     Listo     2   0       1     206  
+P2     1      130    5      Listo     2   0       82    214  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    2      Ejecucion 2   0       30    211  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 222
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      204    66     Listo     2   0       1     207  
+P2     1      131    5      Listo     2   0       82    215  
+-------------------------------------------------------------------
+--- Cola 2 ---
+P3     2      179    1      Ejecucion 2   0       31    212  
+-------------------------------------------------------------------
+Proceso en ejecucion: P3
+
+Tiempo actual: 223
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    66     Listo     2   0       1     208  
+P2     1      132    5      Listo     2   0       82    216  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: Ninguno
+
+Tiempo actual: 225
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    65     Ejecucion 2   0       2     209  
+P2     1      133    5      Listo     2   0       82    217  
 -------------------------------------------------------------------
 --- Cola 2 ---
 -------------------------------------------------------------------
 Proceso en ejecucion: P1
 
-Tiempo actual: 136
+Tiempo actual: 227
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    64     Ejecucion 2   0       3     210  
+P2     1      134    5      Listo     2   0       82    218  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 228
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    63     Ejecucion 2   0       4     211  
+P2     1      135    5      Listo     2   0       82    219  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 229
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    62     Ejecucion 2   0       5     212  
+P2     1      136    5      Listo     2   0       82    220  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 230
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    61     Ejecucion 2   0       6     213  
+P2     1      137    5      Listo     2   0       82    221  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 231
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    60     Ejecucion 2   0       7     214  
+P2     1      138    5      Listo     2   0       82    222  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 232
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    59     Ejecucion 2   0       8     215  
+P2     1      139    5      Listo     2   0       82    223  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 233
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    58     Ejecucion 2   0       9     216  
+P2     1      140    5      Listo     2   0       82    224  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 234
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    57     Ejecucion 2   0       10    217  
+P2     1      141    5      Listo     2   0       82    225  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 235
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    56     Ejecucion 2   0       11    218  
+P2     1      142    5      Listo     2   0       82    226  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 236
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    55     Ejecucion 2   0       12    219  
+P2     1      143    5      Listo     2   0       82    227  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 237
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    54     Ejecucion 2   0       13    220  
+P2     1      144    5      Listo     2   0       82    228  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 238
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    53     Ejecucion 2   0       14    221  
+P2     1      145    5      Listo     2   0       82    229  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 239
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    52     Ejecucion 2   0       15    222  
+P2     1      146    5      Listo     2   0       82    230  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 240
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    51     Ejecucion 2   0       16    223  
+P2     1      147    5      Listo     2   0       82    231  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 241
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    50     Ejecucion 2   0       17    224  
+P2     1      148    5      Listo     2   0       82    232  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 242
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    49     Ejecucion 2   0       18    225  
+P2     1      149    5      Listo     2   0       82    233  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 243
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    48     Ejecucion 2   0       19    226  
+P2     1      150    5      Listo     2   0       82    234  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 244
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    47     Ejecucion 2   0       20    227  
+P2     1      151    5      Listo     2   0       82    235  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 245
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    46     Ejecucion 2   0       21    228  
+P2     1      152    5      Listo     2   0       82    236  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 246
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    45     Ejecucion 2   0       22    229  
+P2     1      153    5      Listo     2   0       82    237  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 247
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    44     Ejecucion 2   0       23    230  
+P2     1      154    5      Listo     2   0       82    238  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 248
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    43     Ejecucion 2   0       24    231  
+P2     1      155    5      Listo     2   0       82    239  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 249
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    42     Ejecucion 2   0       25    232  
+P2     1      156    5      Listo     2   0       82    240  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 250
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    41     Ejecucion 2   0       26    233  
+P2     1      157    5      Listo     2   0       82    241  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 251
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    40     Ejecucion 2   0       27    234  
+P2     1      158    5      Listo     2   0       82    242  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 252
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    39     Ejecucion 2   0       28    235  
+P2     1      159    5      Listo     2   0       82    243  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 253
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    38     Ejecucion 2   0       29    236  
+P2     1      160    5      Listo     2   0       82    244  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 254
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    37     Ejecucion 2   0       30    237  
+P2     1      161    5      Listo     2   0       82    245  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 255
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    36     Ejecucion 2   0       31    238  
+P2     1      162    5      Listo     2   0       82    246  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 256
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    35     Ejecucion 2   0       32    239  
+P2     1      163    5      Listo     2   0       82    247  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 257
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    34     Ejecucion 2   0       33    240  
+P2     1      164    5      Listo     2   0       82    248  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 258
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    33     Ejecucion 2   0       34    241  
+P2     1      165    5      Listo     2   0       82    249  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 259
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    32     Ejecucion 2   0       35    242  
+P2     1      166    5      Listo     2   0       82    250  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 260
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    31     Ejecucion 2   0       36    243  
+P2     1      167    5      Listo     2   0       82    251  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 261
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    30     Ejecucion 2   0       37    244  
+P2     1      168    5      Listo     2   0       82    252  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 262
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    29     Ejecucion 2   0       38    245  
+P2     1      169    5      Listo     2   0       82    253  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 263
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    28     Ejecucion 2   0       39    246  
+P2     1      170    5      Listo     2   0       82    254  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 264
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    27     Ejecucion 2   0       40    247  
+P2     1      171    5      Listo     2   0       82    255  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 265
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    26     Ejecucion 2   0       41    248  
+P2     1      172    5      Listo     2   0       82    256  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 266
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    25     Ejecucion 2   0       42    249  
+P2     1      173    5      Listo     2   0       82    257  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 267
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    24     Ejecucion 2   0       43    250  
+P2     1      174    5      Listo     2   0       82    258  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 268
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    23     Ejecucion 2   0       44    251  
+P2     1      175    5      Listo     2   0       82    259  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 269
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    22     Ejecucion 2   0       45    252  
+P2     1      176    5      Listo     2   0       82    260  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 270
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    21     Ejecucion 2   0       46    253  
+P2     1      177    5      Listo     2   0       82    261  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 271
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    20     Ejecucion 2   0       47    254  
+P2     1      178    5      Listo     2   0       82    262  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 272
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    19     Ejecucion 2   0       48    255  
+P2     1      179    5      Listo     2   0       82    263  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 273
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    18     Ejecucion 2   0       49    256  
+P2     1      180    5      Listo     2   0       82    264  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 274
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    17     Ejecucion 2   0       50    257  
+P2     1      181    5      Listo     2   0       82    265  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 275
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    16     Ejecucion 2   0       51    258  
+P2     1      182    5      Listo     2   0       82    266  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 276
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    15     Ejecucion 2   0       52    259  
+P2     1      183    5      Listo     2   0       82    267  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 277
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    14     Ejecucion 2   0       53    260  
+P2     1      184    5      Listo     2   0       82    268  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 278
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    13     Ejecucion 2   0       54    261  
+P2     1      185    5      Listo     2   0       82    269  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 279
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    12     Ejecucion 2   0       55    262  
+P2     1      186    5      Listo     2   0       82    270  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 280
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    11     Ejecucion 2   0       56    263  
+P2     1      187    5      Listo     2   0       82    271  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 281
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    10     Ejecucion 2   0       57    264  
+P2     1      188    5      Listo     2   0       82    272  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 282
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    9      Ejecucion 2   0       58    265  
+P2     1      189    5      Listo     2   0       82    273  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 283
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    8      Ejecucion 2   0       59    266  
+P2     1      190    5      Listo     2   0       82    274  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 284
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    7      Ejecucion 2   0       60    267  
+P2     1      191    5      Listo     2   0       82    275  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 285
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    6      Ejecucion 2   0       61    268  
+P2     1      192    5      Listo     2   0       82    276  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 286
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    5      Ejecucion 2   0       62    269  
+P2     1      193    5      Listo     2   0       82    277  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 287
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    4      Ejecucion 2   0       63    270  
+P2     1      194    5      Listo     2   0       82    278  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 288
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    3      Ejecucion 2   0       64    271  
+P2     1      195    5      Listo     2   0       82    279  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 289
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    2      Ejecucion 2   0       65    272  
+P2     1      196    5      Listo     2   0       82    280  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 290
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P1     1      205    1      Ejecucion 2   0       66    273  
+P2     1      197    5      Listo     2   0       82    281  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P1
+
+Tiempo actual: 291
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P2     1      198    5      Listo     2   0       82    282  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: Ninguno
+
+Tiempo actual: 293
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P2     1      198    4      Ejecucion 2   0       83    283  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 295
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P2     1      198    3      Ejecucion 2   0       84    284  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 296
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P2     1      198    2      Ejecucion 2   0       85    285  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 297
+
+Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
+-------------------------------------------------------------------
+--- Cola 1 ---
+P2     1      198    1      Ejecucion 2   0       86    286  
+-------------------------------------------------------------------
+--- Cola 2 ---
+-------------------------------------------------------------------
+Proceso en ejecucion: P2
+
+Tiempo actual: 298
 
 Proc   IdCola T.enCol Inst.  Estado    CDC Bloqueo Exe   Total
 -------------------------------------------------------------------
