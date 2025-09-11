@@ -220,7 +220,7 @@ public class SimuladorMLQ {
                         proceso.getCantidadInstrucciones(),
                         proceso.getEstado(),
                         proceso.getTiempoCambioContexto(),
-                        proceso.getTiempoBloqueado(),
+                        proceso.getContBloqueo(),
                         proceso.getTiempoEjecucion(),
                         proceso.getTiempoTotal()));
             }

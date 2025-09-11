@@ -10,6 +10,7 @@ public class Proceso {
     private int tiempoEnCola;
     private int tiempoEjecucion;
     private boolean siCambioContexto;
+    private int contBloqueo;
     
     public Proceso(int idProceso, int idCola, int cantidadInstrucciones, boolean requiereBloqueo) {
         this.idProceso = idProceso;
@@ -21,6 +22,7 @@ public class Proceso {
         this.tiempoEnCola = 0;
         this.tiempoEjecucion = 0;
         this.siCambioContexto = true;
+        this.contBloqueo = 0;
     }
 
     public void listo() {
@@ -40,7 +42,7 @@ public class Proceso {
     }
 
     public int getTiempoTotal() {
-        return tiempoEjecucion + tiempoEnCola + tiempoBloqueado + tiempoCambioContexto;
+        return tiempoEjecucion + tiempoEnCola + contBloqueo + tiempoCambioContexto;
     }
 
     public void incrementarTiempoEjecucion() {
@@ -57,6 +59,10 @@ public class Proceso {
 
     public void disminuirTiempoBloqueo() {
         this.tiempoBloqueado--;
+    }
+
+    public void incrementarTiempoBloqueo(){
+        this.contBloqueo++;
     }
 
     public void ejecutarInstruccion() {
@@ -115,7 +121,11 @@ public class Proceso {
     }
 
     public boolean getSiCambioContexto(){ 
-        return this.siCambioContexto;
+        return siCambioContexto;
+    }
+
+    public int getContBloqueo(){
+        return contBloqueo;
     }
 
 }

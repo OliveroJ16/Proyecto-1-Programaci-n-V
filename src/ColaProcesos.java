@@ -51,9 +51,9 @@ public class ColaProcesos {
         Iterator<Proceso> iterator = procesosBloqueados.iterator();
         while (iterator.hasNext()) {
             Proceso proceso = iterator.next();
-            proceso.disminuirTiempoBloqueo();
+            proceso.incrementarTiempoBloqueo();
 
-            if (proceso.getTiempoBloqueado() <= 0) {
+            if (proceso.getTiempoBloqueado() == proceso.getContBloqueo()) {
                 proceso.listo();
                 proceso.incrementarTiempoCambioContexto();
                 procesosListos.offer(proceso);
