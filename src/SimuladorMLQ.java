@@ -78,7 +78,7 @@ public class SimuladorMLQ {
      * metodo para iniciar la simulacion
      */
     public List<String> ejecutarSimulacion() {
-        List<String> infoActual = new ArrayList<>(); //Arraylist para guardar cada iteracion de los procesos (logs)
+        List<String> infoActual = new ArrayList<>(); // Arraylist para guardar cada iteracion de los procesos (logs)
 
         /*
          * ciclo para para marcar los proceos como listos
@@ -110,11 +110,12 @@ public class SimuladorMLQ {
                     ejecutarProceso();
                 }
             }
-
             tiempoAcual++;
             actualizarTiempos();
             infoActual.add(mostrarTablaEstado());
+            limpiarProcesosTerminados(); //Elimina los procesos marcados como terminado para el logs
         }
+        calcularMetricas();
         return infoActual;
     }
 
@@ -123,11 +124,8 @@ public class SimuladorMLQ {
             for (Proceso proceso : cola.getProcesosActuales()) {
                 if (proceso.getEstado() == EstadoProceso.Listo && proceso != procesoEnEjecucion) {
                     proceso.incrementarTiempoEnCola();
-                    tiempoTotalEspera++;
                 }
-                if (proceso.getEstado() == EstadoProceso.Bloqueado) {
-                    tiempoTotalBloqueo++;
-                }
+
             }
         }
     }
@@ -144,7 +142,6 @@ public class SimuladorMLQ {
         if (proceso != null) {
             proceso.incrementarTiempoCambioContexto();
         }
-        tiempoTotalCambioContexto++;
     }
 
     public void ejecutarProceso() {
@@ -166,11 +163,10 @@ public class SimuladorMLQ {
             procesoEnEjecucion.incrementarTiempoCambioContexto();
             procesoEnEjecucion.listo();
             procesoEnEjecucion.setSiCambioContexto(false);
-        } else {
+        } else{
             procesoEnEjecucion.ejecutar();
             procesoEnEjecucion.ejecutarInstruccion();
             procesoEnEjecucion.incrementarTiempoEjecucion();
-            tiempoTotalEjecucion++;
         }
 
         tiempoRestanteQuantum--;
@@ -189,17 +185,22 @@ public class SimuladorMLQ {
         // Terminó
         if (procesoEnEjecucion.getCantidadInstrucciones() <= 0) {
             colaDelProceso.terminarProceso(procesoEnEjecucion);
-            aplicarCambioContexto(procesoEnEjecucion);
             procesoEnEjecucion = null;
             enCambioContexto = true;
         }
         // Quantum agotado
-        else if (tiempoRestanteQuantum < -1) {
+        else if (tiempoRestanteQuantum < 0) {
             procesoEnEjecucion.listo();
             procesoEnEjecucion.setSiCambioContexto(true);
             colaDelProceso.reinsertarProceso(procesoEnEjecucion);
             procesoEnEjecucion = null;
             enCambioContexto = true;
+        }
+    }
+
+    private void limpiarProcesosTerminados() {
+        for (ColaProcesos cola : colas) {
+            cola.getProcesosActuales().removeIf(Proceso::isMostrarTerminado);
         }
     }
 
@@ -230,9 +231,6 @@ public class SimuladorMLQ {
             }
         }
         sb.append("----------------------------------------------------------\n");
-        sb.append(String.format("Proceso en ejecución: %s%n",
-                procesoEnEjecucion != null ? "P" + procesoEnEjecucion.getIdProceso() : "Ninguno"));
-
         return sb.toString();
     }
 
@@ -256,6 +254,17 @@ public class SimuladorMLQ {
             ColaProcesos cola = colas.get(i);
             System.out.println("Cola " + (i + 1) + " - Procesos terminados: " +
                     cola.getProcesosTerminados().size());
+        }
+    }
+
+    private void calcularMetricas() {
+        for (ColaProcesos colaProcesos : colas) {
+            for (Proceso p : colaProcesos.getProcesosTerminados()) {
+                tiempoTotalEjecucion = tiempoTotalEjecucion + p.getTiempoEjecucion();
+                tiempoTotalCambioContexto = tiempoTotalCambioContexto + p.getTiempoCambioContexto();
+                tiempoTotalBloqueo = tiempoTotalBloqueo + p.getContBloqueo();
+                tiempoTotalEspera = tiempoTotalEspera + p.getTiempoEnCola();
+            }
         }
     }
 }

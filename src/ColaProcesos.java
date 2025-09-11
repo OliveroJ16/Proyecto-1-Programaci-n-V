@@ -43,8 +43,8 @@ public class ColaProcesos {
 
     public void terminarProceso(Proceso proceso) {
         proceso.terminar();
+        proceso.setMostrarTerminado(true);
         procesosTerminados.add(proceso);
-        procesosActuales.remove(proceso);
     }
 
     public void procesarBloqueados() {
@@ -81,4 +81,5 @@ public class ColaProcesos {
     public List<Proceso> getProcesosActuales() {
         return procesosActuales;
     }
+
 }
