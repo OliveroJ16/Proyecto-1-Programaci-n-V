@@ -9,7 +9,8 @@ public class Proceso {
     private int tiempoBloqueado;
     private int tiempoEnCola;
     private int tiempoEjecucion;
-
+    private boolean siCambioContexto;
+    
     public Proceso(int idProceso, int idCola, int cantidadInstrucciones, boolean requiereBloqueo) {
         this.idProceso = idProceso;
         this.idCola = idCola;
@@ -19,6 +20,7 @@ public class Proceso {
         this.tiempoCambioContexto = 0;
         this.tiempoEnCola = 0;
         this.tiempoEjecucion = 0;
+        this.siCambioContexto = true;
     }
 
     public void listo() {
@@ -107,4 +109,13 @@ public class Proceso {
     public void setRequerirBloqueo(boolean bloqueo) {
         requiereBloqueo = bloqueo;
     }
+
+    public void setSiCambioContexto(boolean cambio){ 
+        this.siCambioContexto = cambio;
+    }
+
+    public boolean getSiCambioContexto(){ 
+        return this.siCambioContexto;
+    }
+
 }
