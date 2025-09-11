@@ -4,54 +4,68 @@ import java.util.Scanner;
 
 public class Sistema {
     public static void main(String[] args) {
-
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
-        
-        final int cambioContexto = 1; //Establecer el cambio de contexto
+
+        final int cambioContexto = 1;
         final int quantum;
         final int numeroProcesos;
 
-        quantum = random.nextInt(91) + 10;  // quantum entre 10 y 100
-
-        System.out.printf("Ingrese el numero de procesos: ");
+        quantum = random.nextInt(91) + 10;
+        System.out.print("Ingrese el numero de procesos: ");
         numeroProcesos = scanner.nextInt();
-        
+
         SimuladorMLQ simulador = new SimuladorMLQ(cambioContexto, quantum, numeroProcesos);
-        
-        //Mostrar datos iniciales
+
         System.out.println("Quantum: " + quantum);
         System.out.println("CDC: " + cambioContexto);
         System.out.println();
 
         simulador.crearProcesos();
 
-        mostrarProcesosIniciales(simulador.obtenerProcesos());
+        System.out.println("=== PCBs iniciales ===");
+        mostrarPCBsIniciales(simulador.obtenerProcesos());
 
-        //Iniciar simulacion
+        System.out.println("=== Tabla inicial de estados ===");
+        mostrarTablaInicial(simulador.obtenerProcesos());
+
         List<String> logs = simulador.ejecutarSimulacion();
         mostrarLogsPaginados(logs);
 
-        GestorArchivo gestor = new GestorArchivo("salida_simulacion.txt");
-        gestor.guardarResultados(logs);
-
         simulador.mostrarMetricas();
+
+        scanner.close();
     }
 
-    private static void mostrarProcesosIniciales(List<Proceso> procesos) {
-        System.out.printf("%-4s %-4s %-5s %-6s %-3s %-7s %-5s%n",
+    private static void mostrarPCBsIniciales(List<Proceso> procesos) {
+        System.out.printf("%-6s %-6s %-8s %-8s %-6s %-8s %-8s%n",
                 "Proc", "Cola", "Inst.", "Estado", "CDC", "Bloqueo", "TiempoBlock");
 
         for (Proceso p : procesos) {
-            System.out.printf("P%-3d %-4d %-5d %-6s %-3d %-7s %-5d%n",
+            System.out.printf("P%-5d %-6d %-8d %-8s %-6d %-8s %-8d%n",
                     p.getIdProceso(),
                     p.getIdCola(),
                     p.getCantidadInstrucciones(),
                     p.getEstado(),
                     p.getTiempoCambioContexto(),
                     p.isRequiereBloqueo() ? "Si" : "No",
-                    p.getTiempoBloqueado()
-            );
+                    p.getTiempoBloqueoDefinido());
+        }
+        System.out.println();
+    }
+
+    private static void mostrarTablaInicial(List<Proceso> procesos) {
+        System.out.printf("%-6s %-8s %-8s %-6s %-6s %-6s %-6s%n",
+                "Proc", "Inst.", "Estado", "Cola", "CDC", "Block", "Exe");
+        for (Proceso p : procesos) {
+            System.out.printf("P%-5d %-8d %-8s %-6d %-6d %-6d %-6d%n",
+                    p.getIdProceso(),
+                    p.getCantidadInstrucciones(),
+                    "L", // todos inician en Listo
+                    p.getTiempoEnCola(),
+                    p.getTiempoCambioContexto(),
+                    p.getTiempoBloqueado(),
+                    p.getTiempoEjecucion());
         }
         System.out.println();
     }
