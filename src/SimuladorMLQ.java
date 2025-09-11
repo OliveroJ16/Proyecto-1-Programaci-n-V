@@ -45,14 +45,10 @@ public class SimuladorMLQ {
                 int idProceso = i * (numeroProcesos / 2) + j;
                 boolean requiereBloqueo = random.nextBoolean();
 
-                Proceso proceso = new Proceso(
-                        idProceso,
-                        cola.getIdCola(),
-                        random.nextInt(96) + 5,
-                        requiereBloqueo);
+                Proceso proceso = new Proceso(idProceso, cola.getIdCola(), random.nextInt(10) + 2, requiereBloqueo);
 
                 if (requiereBloqueo) {
-                    proceso.asignarTiempoBloqueado(random.nextInt(7) + 2);
+                    proceso.asignarTiempoBloqueado(random.nextInt(2) + 3);
                 }
                 cola.agregarProceso(proceso);
             }
@@ -62,18 +58,36 @@ public class SimuladorMLQ {
 
     // Round Robin entre colas
     private ColaProcesos obtenerSiguienteCola() {
-        for (int i = 0; i < colas.size(); i++) {
-            ColaProcesos cola = colas.get(colaActual);
-            colaActual = (colaActual + 1) % colas.size();
-            if (!cola.procesosListosVacia()) {
-                return cola;
-            }
+        ColaProcesos cola = colas.get(colaActual);
+        colaActual = (colaActual + 1) % 2; // Alternae entre 0 y 1
+
+        /*
+         * Si la cola tiene procesos listos, la devolvemos
+         * si no, revisamos la otra cola
+         */
+        if (!cola.procesosListosVacia()) {
+            return cola;
+        } else {
+            // Revisamos la otra cola
+            ColaProcesos cola2 = colas.get(colaActual);
+            return cola2.procesosListosVacia() ? cola2 : null;
         }
-        return null;
     }
 
+    /*
+     * metodo para iniciar la simulacion
+     */
     public List<String> ejecutarSimulacion() {
-        List<String> infoActual = new ArrayList<>();
+        List<String> infoActual = new ArrayList<>(); //Arraylist para guardar cada iteracion de los procesos (logs)
+
+        /*
+         * ciclo para para marcar los proceos como listos
+         */
+        for (ColaProcesos cola : colas) {
+            for (Proceso proceso : cola.getProcesosActuales()) {
+                proceso.listo();
+            }
+        }
 
         while (!simulacionCompleta()) {
             infoActual.add("Tiempo actual: " + tiempoAcual);
@@ -84,13 +98,11 @@ public class SimuladorMLQ {
 
             if (enCambioContexto) {
                 enCambioContexto = false;
-                tiempoTotalCambioContexto++; // 🔹 solo +1
             } else {
                 if (procesoEnEjecucion == null) {
                     ColaProcesos colaSeleccionada = obtenerSiguienteCola();
                     if (colaSeleccionada != null) {
                         procesoEnEjecucion = colaSeleccionada.obtenerProceso();
-                        //procesoEnEjecucion.ejecutar();
                         tiempoRestanteQuantum = quantum;
                     }
                 }
@@ -132,11 +144,12 @@ public class SimuladorMLQ {
         if (proceso != null) {
             proceso.incrementarTiempoCambioContexto();
         }
-        tiempoTotalCambioContexto++; // 🔹 solo +1 global
+        tiempoTotalCambioContexto++;
     }
 
     public void ejecutarProceso() {
-        if (procesoEnEjecucion == null) return;
+        if (procesoEnEjecucion == null)
+            return;
 
         ColaProcesos colaDelProceso = null;
         for (ColaProcesos cola : colas) {
@@ -145,31 +158,26 @@ public class SimuladorMLQ {
                 break;
             }
         }
+        if (colaDelProceso == null)
+            return;
 
-        if (colaDelProceso == null) return;
-
-
-        //CAMBIOS QUE SE ESTAN REALIZANDO
+        // Ejecutar proceso y controlar cambio de contexto
         if (procesoEnEjecucion.getSiCambioContexto()) {
             procesoEnEjecucion.incrementarTiempoCambioContexto();
             procesoEnEjecucion.listo();
             procesoEnEjecucion.setSiCambioContexto(false);
-        }else{ 
+        } else {
             procesoEnEjecucion.ejecutar();
             procesoEnEjecucion.ejecutarInstruccion();
             procesoEnEjecucion.incrementarTiempoEjecucion();
             tiempoTotalEjecucion++;
         }
 
-        // Ejecuta una instrucción en CPU
-        //procesoEnEjecucion.ejecutarInstruccion();
-        //procesoEnEjecucion.incrementarTiempoEjecucion();
         tiempoRestanteQuantum--;
-        //tiempoTotalEjecucion++;
 
         // Bloqueo
         if (procesoEnEjecucion.isRequiereBloqueo() &&
-            procesoEnEjecucion.getTiempoEjecucion() > 1) {
+                procesoEnEjecucion.getTiempoEjecucion() > 1) {
             procesoEnEjecucion.setRequerirBloqueo(false);
             colaDelProceso.bloquearProceso(procesoEnEjecucion);
             aplicarCambioContexto(procesoEnEjecucion);
@@ -186,15 +194,12 @@ public class SimuladorMLQ {
             enCambioContexto = true;
         }
         // Quantum agotado
-        else if (tiempoRestanteQuantum <= 0) {
+        else if (tiempoRestanteQuantum < -1) {
             procesoEnEjecucion.listo();
-            procesoEnEjecucion.incrementarTiempoCambioContexto();
             procesoEnEjecucion.setSiCambioContexto(true);
             colaDelProceso.reinsertarProceso(procesoEnEjecucion);
-            aplicarCambioContexto(procesoEnEjecucion);
             procesoEnEjecucion = null;
             enCambioContexto = true;
-            
         }
     }
 

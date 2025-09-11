@@ -44,7 +44,7 @@ public class ColaProcesos {
     public void terminarProceso(Proceso proceso) {
         proceso.terminar();
         procesosTerminados.add(proceso);
-        procesosActuales.remove(proceso); // 🔹 lo quitamos de la lista activa
+        procesosActuales.remove(proceso);
     }
 
     public void procesarBloqueados() {

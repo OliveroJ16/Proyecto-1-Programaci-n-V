@@ -12,7 +12,7 @@ public class Sistema {
         final int quantum;
         final int numeroProcesos;
 
-        quantum = random.nextInt(91) + 10;
+        quantum = 4;//random.nextInt(91) + 10;
 
         System.out.print("Ingrese el numero de procesos: ");
         numeroProcesos = scanner.nextInt();

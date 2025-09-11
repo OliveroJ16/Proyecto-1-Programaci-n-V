@@ -16,7 +16,7 @@ public class Proceso {
         this.idCola = idCola;
         this.cantidadInstrucciones = cantidadInstrucciones;
         this.requiereBloqueo = requiereBloqueo;
-        this.estado = EstadoProceso.Listo;
+        this.estado = EstadoProceso.Nuevo;
         this.tiempoCambioContexto = 0;
         this.tiempoEnCola = 0;
         this.tiempoEjecucion = 0;
