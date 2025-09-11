@@ -10,6 +10,7 @@ public class SimuladorMLQ {
     private int numeroProcesos;
     private List<ColaProcesos> colas;
     private Proceso procesoEnEjecucion;
+    private Proceso procesoMarcado; // referencia para mostrar proceso en ejecución
     private int tiempoAcual;
     private int tiempoRestanteQuantum;
     private boolean enCambioContexto;
@@ -27,6 +28,7 @@ public class SimuladorMLQ {
         this.numeroProcesos = numeroProcesos;
         this.colas = new ArrayList<>();
         this.procesoEnEjecucion = null;
+        this.procesoMarcado = null;
         this.tiempoAcual = 0;
         this.tiempoRestanteQuantum = 0;
         this.enCambioContexto = false;
@@ -37,26 +39,20 @@ public class SimuladorMLQ {
         this.tiempoTotalEspera = 0;
     }
 
-    // Crear procesos en 2 colas (soporta número impar)
     public void crearProcesos() {
         int procesosAsignados = 0;
-
         for (int i = 0; i < 2; i++) {
             ColaProcesos cola = new ColaProcesos(i + 1);
-
             int procesosEnCola = (i == 1) ? (numeroProcesos - procesosAsignados) : (numeroProcesos / 2);
-
             for (int j = 0; j < procesosEnCola; j++) {
                 int idProceso = procesosAsignados++;
                 boolean requiereBloqueo = random.nextBoolean();
-
                 Proceso proceso = new Proceso(
                         idProceso,
                         cola.getIdCola(),
                         random.nextInt(96) + 5, // 5 a 100 instrucciones
                         requiereBloqueo
                 );
-
                 cola.agregarProceso(proceso);
             }
             this.colas.add(cola);
@@ -81,11 +77,13 @@ public class SimuladorMLQ {
         while (!simulacionCompleta()) {
             infoActual.add("Tiempo actual: " + tiempoAcual);
 
+            // Procesar bloqueados
             for (ColaProcesos cola : colas) {
                 cola.procesarBloqueados();
             }
 
             if (enCambioContexto) {
+                // CDC consumido
                 enCambioContexto = false;
                 tiempoTotalCambioContexto++;
             } else {
@@ -93,6 +91,7 @@ public class SimuladorMLQ {
                     ColaProcesos colaSeleccionada = obtenerSiguienteCola();
                     if (colaSeleccionada != null) {
                         procesoEnEjecucion = colaSeleccionada.obtenerProceso();
+                        procesoMarcado = procesoEnEjecucion; // marcar para mostrar en ejecución
                         procesoEnEjecucion.incrementarTiempoCambioContexto();
                         enCambioContexto = true;
                         tiempoRestanteQuantum = quantum;
@@ -106,6 +105,7 @@ public class SimuladorMLQ {
             actualizarTiempos();
             infoActual.add(mostrarTablaEstado());
         }
+
         return infoActual;
     }
 
@@ -131,7 +131,6 @@ public class SimuladorMLQ {
         return totalTerminados == numeroProcesos;
     }
 
-    // --- EJECUCIÓN CORREGIDA ---
     public void ejecutarProceso() {
         if (procesoEnEjecucion == null)
             return;
@@ -145,35 +144,36 @@ public class SimuladorMLQ {
         }
         if (colaDelProceso == null) return;
 
-        // BLOQUEO
-        if (procesoEnEjecucion.isRequiereBloqueo()) {
-            if (!procesoEnEjecucion.isYaEjecutadoPrimeraVez()) {
-                procesoEnEjecucion.setYaEjecutadoPrimeraVez(true);
-            } else {
-                procesoEnEjecucion.setRequerirBloqueo(false);
-                procesoEnEjecucion.asignarTiempoBloqueado(procesoEnEjecucion.getTiempoBloqueoDefinido() + 1);
-                colaDelProceso.bloquearProceso(procesoEnEjecucion);
-                enCambioContexto = true;
-                procesoEnEjecucion = null;
-                return;
-            }
-        }
-
-        // EJECUCIÓN
         procesoEnEjecucion.ejecutar();
-        procesoEnEjecucion.ejecutarInstruccion();
-        procesoEnEjecucion.incrementarTiempoEjecucion();
-        tiempoTotalEjecucion--;
+        ejecutarTick(procesoEnEjecucion);
+
         tiempoRestanteQuantum--;
 
-        // TERMINAR
+        // TERMINADO
         if (procesoEnEjecucion.getCantidadInstrucciones() <= 0) {
             if (!procesoEnEjecucion.isMarcarParaTerminar()) {
                 procesoEnEjecucion.setMarcarParaTerminar(true);
             } else {
                 colaDelProceso.terminarProceso(procesoEnEjecucion);
                 procesoEnEjecucion = null;
+                procesoMarcado = null;
                 enCambioContexto = true;
+                return;
+            }
+        }
+
+        // BLOQUEO
+        if (procesoEnEjecucion != null && procesoEnEjecucion.isRequiereBloqueo()) {
+            if (!procesoEnEjecucion.isYaEjecutadoPrimeraVez()) {
+                procesoEnEjecucion.setYaEjecutadoPrimeraVez(true);
+            } else {
+                procesoEnEjecucion.setRequerirBloqueo(false);
+                procesoEnEjecucion.asignarTiempoBloqueado(procesoEnEjecucion.getTiempoBloqueoDefinido() + 1);
+                procesoEnEjecucion.incrementarTiempoCambioContexto();
+                colaDelProceso.bloquearProceso(procesoEnEjecucion);
+                procesoEnEjecucion = null;
+                enCambioContexto = true;
+                // Mantener procesoMarcado para mostrar que estaba ejecutándose
                 return;
             }
         }
@@ -181,9 +181,17 @@ public class SimuladorMLQ {
         // QUANTUM AGOTADO
         if (procesoEnEjecucion != null && tiempoRestanteQuantum <= 0) {
             procesoEnEjecucion.listo();
+            procesoEnEjecucion.incrementarTiempoCambioContexto();
             colaDelProceso.reinsertarProceso(procesoEnEjecucion);
             procesoEnEjecucion = null;
             enCambioContexto = true;
+        }
+    }
+
+    private void ejecutarTick(Proceso proceso) {
+        if (proceso.getEstado() == EstadoProceso.Ejecucion && proceso.getCantidadInstrucciones() > 0) {
+            proceso.ejecutarInstruccion();
+            proceso.incrementarTiempoEjecucion();
         }
     }
 
@@ -216,8 +224,9 @@ public class SimuladorMLQ {
 
         sb.append("----------------------------------------------------------\n");
         sb.append(String.format("Proceso en ejecución: %s%n",
-                procesoEnEjecucion != null ? "P" + procesoEnEjecucion.getIdProceso() : "Ninguno"));
+                procesoMarcado != null ? "P" + procesoMarcado.getIdProceso() : "Ninguno"));
 
+        // eliminar procesos terminados después de mostrarlos una vez
         for (ColaProcesos cola : colas) {
             cola.getProcesosActuales().removeIf(p -> p.getEstado() == EstadoProceso.Terminado);
         }
