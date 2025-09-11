@@ -8,18 +8,18 @@ public class SimuladorMLQ {
     private final int quantum;
     private final int cambioContexto;
     private int numeroProcesos;
-    private List<ColaProcesos> colas; 
+    private List<ColaProcesos> colas;
     private Proceso procesoEnEjecucion;
     private int tiempoAcual;
     private int tiempoRestanteQuantum;
     private boolean enCambioContexto;
-    private int colaActual; 
+    private int colaActual;
 
     // Métricas
     private int tiempoTotalEjecucion;
     private int tiempoTotalCambioContexto;
     private int tiempoTotalBloqueo;
-    private int tiempoTotalEspera; 
+    private int tiempoTotalEspera;
 
     public SimuladorMLQ(int cambioContexto, int quantum, int numeroProcesos) {
         this.quantum = quantum;
@@ -44,8 +44,6 @@ public class SimuladorMLQ {
         for (int i = 0; i < 2; i++) {
             ColaProcesos cola = new ColaProcesos(i + 1);
 
-            // Cola 1 recibe numeroProcesos / 2
-            // Cola 2 recibe lo que falte
             int procesosEnCola = (i == 1) ? (numeroProcesos - procesosAsignados) : (numeroProcesos / 2);
 
             for (int j = 0; j < procesosEnCola; j++) {
@@ -65,7 +63,6 @@ public class SimuladorMLQ {
         }
     }
 
-    // Round Robin entre colas
     private ColaProcesos obtenerSiguienteCola() {
         for (int i = 0; i < colas.size(); i++) {
             ColaProcesos cola = colas.get(colaActual);
@@ -96,11 +93,11 @@ public class SimuladorMLQ {
                     ColaProcesos colaSeleccionada = obtenerSiguienteCola();
                     if (colaSeleccionada != null) {
                         procesoEnEjecucion = colaSeleccionada.obtenerProceso();
+                        procesoEnEjecucion.incrementarTiempoCambioContexto();
+                        enCambioContexto = true;
                         tiempoRestanteQuantum = quantum;
                     }
-                }
-
-                if (procesoEnEjecucion != null) {
+                } else {
                     ejecutarProceso();
                 }
             }
@@ -134,6 +131,7 @@ public class SimuladorMLQ {
         return totalTerminados == numeroProcesos;
     }
 
+    // --- EJECUCIÓN CORREGIDA ---
     public void ejecutarProceso() {
         if (procesoEnEjecucion == null)
             return;
@@ -147,17 +145,31 @@ public class SimuladorMLQ {
         }
         if (colaDelProceso == null) return;
 
-        // Ejecutar ciclo
+        // BLOQUEO
+        if (procesoEnEjecucion.isRequiereBloqueo()) {
+            if (!procesoEnEjecucion.isYaEjecutadoPrimeraVez()) {
+                procesoEnEjecucion.setYaEjecutadoPrimeraVez(true);
+            } else {
+                procesoEnEjecucion.setRequerirBloqueo(false);
+                procesoEnEjecucion.asignarTiempoBloqueado(procesoEnEjecucion.getTiempoBloqueoDefinido() + 1);
+                colaDelProceso.bloquearProceso(procesoEnEjecucion);
+                enCambioContexto = true;
+                procesoEnEjecucion = null;
+                return;
+            }
+        }
+
+        // EJECUCIÓN
         procesoEnEjecucion.ejecutar();
         procesoEnEjecucion.ejecutarInstruccion();
         procesoEnEjecucion.incrementarTiempoEjecucion();
-        tiempoTotalEjecucion++;
+        tiempoTotalEjecucion--;
         tiempoRestanteQuantum--;
 
-        // --- TERMINAR ---
+        // TERMINAR
         if (procesoEnEjecucion.getCantidadInstrucciones() <= 0) {
             if (!procesoEnEjecucion.isMarcarParaTerminar()) {
-                procesoEnEjecucion.setMarcarParaTerminar(true); // mostrar una vez en Ejecución
+                procesoEnEjecucion.setMarcarParaTerminar(true);
             } else {
                 colaDelProceso.terminarProceso(procesoEnEjecucion);
                 procesoEnEjecucion = null;
@@ -166,26 +178,9 @@ public class SimuladorMLQ {
             }
         }
 
-        // --- BLOQUEO ---
-        if (procesoEnEjecucion != null && procesoEnEjecucion.isRequiereBloqueo()) {
-            if (!procesoEnEjecucion.isYaEjecutadoPrimeraVez()) {
-                procesoEnEjecucion.setYaEjecutadoPrimeraVez(true);
-            } else {
-                procesoEnEjecucion.setRequerirBloqueo(false);
-                // ✅ Asignamos tiempo de bloqueo +1 para compensar la resta inmediata
-                procesoEnEjecucion.asignarTiempoBloqueado(procesoEnEjecucion.getTiempoBloqueoDefinido() + 1);
-                procesoEnEjecucion.incrementarTiempoCambioContexto(); // CDC al bloquear
-                colaDelProceso.bloquearProceso(procesoEnEjecucion);
-                enCambioContexto = true;
-                procesoEnEjecucion = null;
-                return;
-            }
-        }
-
-        // --- QUANTUM AGOTADO ---
+        // QUANTUM AGOTADO
         if (procesoEnEjecucion != null && tiempoRestanteQuantum <= 0) {
             procesoEnEjecucion.listo();
-            procesoEnEjecucion.incrementarTiempoCambioContexto(); // CDC al reinsertar
             colaDelProceso.reinsertarProceso(procesoEnEjecucion);
             procesoEnEjecucion = null;
             enCambioContexto = true;
@@ -223,7 +218,6 @@ public class SimuladorMLQ {
         sb.append(String.format("Proceso en ejecución: %s%n",
                 procesoEnEjecucion != null ? "P" + procesoEnEjecucion.getIdProceso() : "Ninguno"));
 
-        // 🔹 eliminar procesos terminados después de mostrarlos una vez
         for (ColaProcesos cola : colas) {
             cola.getProcesosActuales().removeIf(p -> p.getEstado() == EstadoProceso.Terminado);
         }
